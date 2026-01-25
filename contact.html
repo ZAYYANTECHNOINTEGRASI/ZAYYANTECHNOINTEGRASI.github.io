@@ -54,34 +54,40 @@
             </nav>
 
             <div class="flex items-center space-x-4">
-                <a href="https://wa.me/6281234567890"
-                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium transition flex items-center">
-                    <i class="fab fa-whatsapp mr-2"></i> Chat WhatsApp
+                <a href="https://wa.me/6281291050009"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-whatsapp mr-2"></i> <span class="hidden sm:inline">Chat WhatsApp</span>
                 </a>
-                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
-            <div class="px-4 py-2 space-y-2">
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Beranda</a>
-                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary">Tentang Kami</a>
-                <a href="index.html#layanan" class="block py-2 text-gray-700 hover:text-primary">Layanan</a>
-                <div class="pl-4">
-                    <a href="index.html#produk-hikvision" class="block py-2 text-gray-700 hover:text-primary">•
-                        Hikvision</a>
-                    <a href="index.html#produk-dahua" class="block py-2 text-gray-700 hover:text-primary">• Dahua</a>
-                    <a href="index.html#produk-ezviz" class="block py-2 text-gray-700 hover:text-primary">• Ezviz</a>
-                    <a href="index.html#produk-imou" class="block py-2 text-gray-700 hover:text-primary">• Imou</a>
-                    <a href="index.html#produk-uniview" class="block py-2 text-gray-700 hover:text-primary">•
-                        Uniview</a>
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-white shadow-lg py-2 px-4">
+            <a href="index.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded">Beranda</a>
+            <div class="relative">
+                <button id="mobile-products-menu"
+                    class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100 rounded flex justify-between items-center">
+                    Produk <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div id="products-dropdown" class="hidden pl-4">
+                    <a href="index.html#produk-hikvision"
+                        class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded">Hikvision</a>
+                    <a href="index.html#produk-dahua"
+                        class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded">Dahua</a>
+                    <a href="index.html#produk-ezviz"
+                        class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded">Ezviz</a>
+                    <a href="index.html#produk-imou"
+                        class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded">Imou</a>
+                    <a href="index.html#produk-uniview"
+                        class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded">Uniview</a>
                 </div>
-                <a href="index.html#paket" class="block py-2 text-gray-700 hover:text-primary">Paket</a>
-                <a href="contact.html" class="block py-2 text-primary font-medium">Kontak</a>
             </div>
+            <a href="index.html#layanan" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded">Layanan</a>
+            <a href="index.html#paket" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded">Paket</a>
+            <a href="about.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded">Tentang Kami</a>
+            <a href="contact.html" class="block py-2 px-4 text-primary font-medium hover:bg-gray-100 rounded">Kontak</a>
         </div>
     </header>
 
@@ -457,6 +463,67 @@
         class="fixed bottom-24 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-blue-600 transition z-50 hidden">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileProductsMenu = document.getElementById('mobile-products-menu');
+            const productsDropdown = document.getElementById('products-dropdown');
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Toggle products dropdown in mobile menu
+            if (mobileProductsMenu && productsDropdown) {
+                mobileProductsMenu.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    productsDropdown.classList.toggle('hidden');
+                    this.querySelector('i').classList.toggle('fa-chevron-down');
+                    this.querySelector('i').classList.toggle('fa-chevron-up');
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (mobileMenu && !mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                    mobileMenu.classList.add('hidden');
+                    if (productsDropdown) productsDropdown.classList.add('hidden');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        mobileMenu.classList.add('hidden');
+                        if (productsDropdown) productsDropdown.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 
     <script>
         // Mobile Menu Toggle
