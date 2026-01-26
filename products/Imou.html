@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imou - ZAYYAN TECHNO INTEGRASI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db',
+                        secondary: '#1e40af',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">
+                    ZAYYAN TECHNO INTEGRASI
+                </a>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="font-medium hover:text-primary transition">Beranda</a>
+
+                <!-- Desktop Dropdown -->
+                <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                    @mouseleave="open = false">
+                    <button @click="open = !open"
+                        class="font-medium hover:text-primary transition flex items-center focus:outline-none"
+                        :class="{'text-primary': open}">
+                        <span class="font-medium text-primary hover:bg-gray-100">Produk</span>
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200"
+                            :class="{'transform rotate-180': open}"></i>
+                    </button>
+                    <div x-show="open"
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100"
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="opacity-0 transform scale-95"
+                        x-transition:enter-end="opacity-100 transform scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="opacity-100 transform scale-100"
+                        x-transition:leave-end="opacity-0 transform scale-95" @click.away="open = false"
+                        @mouseenter="open = true" @mouseleave="open = false">
+                        <div class="px-4 py-2 text-sm text-gray-700 font-medium border-b border-gray-100">CCTV</div>
+                        <a href="hikvision.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-blue-500"></i> Hikvision
+                        </a>
+                        <a href="dahua.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-red-500"></i> Dahua
+                        </a>
+                        <a href="ezviz.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-purple-500"></i> Ezviz
+                        </a>
+                        <a href="imou.html"
+                            class="block px-4 py-2 text-sm text-primary hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-yellow-500"></i> Imou
+                        </a>
+                        <a href="uniview.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-green-500"></i> Uniview
+                        </a>
+                        <a href="hilook.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-orange-600"></i> Hilook
+                        </a>
+                        <a href="tiandy.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-camera mr-2 text-indigo-500"></i> Tiandy
+                        </a>
+                        <div class="px-4 py-2 text-sm text-gray-700 font-medium border-t border-b border-gray-100 mt-1">
+                            Router</div>
+                        <a href="tplink.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-wifi mr-2 text-blue-400"></i> TP-Link
+                        </a>
+                        <a href="tenda.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-wifi mr-2 text-orange-500"></i> Tenda
+                        </a>
+                        <a href="xiaomi.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="fas fa-wifi mr-2 text-orange-300"></i> Xiaomi
+                        </a>
+                    </div>
+                </div>
+                <a href="../index.html#layanan" class="font-medium hover:text-primary transition">Layanan</a>
+                <a href="../index.html#paket" class="font-medium hover:text-primary transition">Paket</a>
+                <a href="../about.html" class="font-medium hover:text-primary transition">Tentang Kami</a>
+                <a href="../contact.html" class="font-medium hover:text-primary transition">Kontak</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/6281291050009"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-whatsapp mr-2"></i> <span class="hidden sm:inline">Chat WhatsApp</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu, show/hide based on menu state -->
+            <!-- Mobile Menu -->
+            <div x-data="{ open: false }" class="md:hidden">
+                <button @click="open = !open" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Mobile Menu Overlay -->
+                <div x-show="open" @click.away="open = false" class="fixed inset-0 bg-black bg-opacity-50 z-40"
+                    style="display: none;"></div>
+
+                <!-- Mobile Menu Content -->
+                <div x-show="open" class="fixed inset-y-0 right-0 w-4/5 bg-white shadow-lg z-50 overflow-y-auto"
+                    style="display: none;">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Menu</span>
+                        <button @click="open = false" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <nav class="p-4 space-y-2">
+                        <a href="../index.html"
+                            class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Beranda</a>
+
+                        <!-- Mobile Products Dropdown -->
+                        <div x-data="{ open: false }" class="relative">
+                            <button @click="open = !open"
+                                class="w-full flex justify-between items-center py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium"
+                                :class="{'text-primary': open}">
+                                <span>Produk</span>
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-200"
+                                    :class="{'transform rotate-180': open}"></i>
+                            </button>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                x-transition:enter-start="opacity-0 transform scale-95"
+                                x-transition:enter-end="opacity-100 transform scale-100"
+                                x-transition:leave="transition ease-in duration-75"
+                                x-transition:leave-start="opacity-100 transform scale-100"
+                                x-transition:leave-end="opacity-0 transform scale-95" class="pl-4 mt-1 space-y-1">
+                                <div class="text-sm font-medium text-gray-500 py-1">CCTV</div>
+                                <a href="hikvision.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Hikvision</a>
+                                <a href="dahua.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Dahua</a>
+                                <a href="ezviz.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Ezviz</a>
+                                <a href="imou.html"
+                                    class="block py-2 px-4 text-primary hover:bg-gray-50 rounded-lg">Imou</a>
+                                <a href="uniview.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Uniview</a>
+                                <a href="hilook.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Hilook</a>
+                                <a href="tiandy.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Tiandy</a>
+
+                                <div class="text-sm font-medium text-gray-500 py-1">Router</div>
+                                <a href="tplink.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">TP-Link</a>
+                                <a href="tenda.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Tenda</a>
+                                <a href="xiaomi.html"
+                                    class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Xiaomi</a>
+                            </div>
+                        </div>
+
+                        <a href="../index.html#layanan"
+                            class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Layanan</a>
+                        <a href="../index.html#paket"
+                            class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Paket</a>
+                        <a href="../about.html"
+                            class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Tentang
+                            Kami</a>
+                        <a href="../contact.html"
+                            class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Kontak</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-20 md:py-28">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Imou</h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Solusi keamanan terdepan dengan teknologi canggih untuk kebutuhan pengawasan terbaik Anda.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#produk"
+                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition">
+                        Lihat Produk
+                    </a>
+                    <a href="#konsultasi"
+                        class="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-12 bg-gray-50" id="produk">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kategori Produk</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Temukan berbagai produk Imou berkualitas tinggi untuk memenuhi kebutuhan keamanan Anda.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <!-- Image -->
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 0)">
+                        <img src="../images/cctv/imou/1.jpg" alt="Paket CCTV 3 Kamera"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6">
+                        <!-- Price -->
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.499.000
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou REX 2D</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Panoramic pan & tilt for 360° protection
+                        </p>
+
+                        <!-- Spesifikasi -->
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 3MP 3K Resolution</li>
+                                <li>• Panoramic Pan & Tilt</li>
+                                <li>• Smart Tracking</li>
+                                <li>• Privacy Mode</li>
+                                <li>• Motion and Human Detection</li>
+                                <li>• Two-Way Talk</li>
+                                <li>• Abnormal Sound Alarm</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                            </ul>
+                        </details>
+
+                        <!-- Paket -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>1 Kamera REX 2D</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Terminal 1 Lubang, 1 Unit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Jasa Pasang & Konfigurasi</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA -->
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20REX%202D%20IDR%201.499.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 1)">
+                        <img src="../images/cctv/imou/2.jpg" alt="Imou Cue 2E"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.249.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Cue 2E</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Home Indoor Wifi Camera
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 2MP FHD Resolution</li>
+                                <li>• Human & Motion Detection</li>
+                                <li>• Built-in Siren</li>
+                                <li>• Night Vision</li>
+                                <li>• Two-Way Talk</li>
+                                <li>• Alarm Notification</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Cue 2E</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Cue%202E%20IDR%201.249.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 2)">
+                        <img src="../images/cctv/imou/3.jpg" alt="Imou Ranger S2"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.399.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Ranger S2</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Home Indoor Wifi Camera
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 4MP 2K+ Resolution</li>
+                                <li>• Human & Motion Detection</li>
+                                <li>• Built-in Siren</li>
+                                <li>• Abnormal Sound Alarm</li>
+                                <li>• Night Vision</li>
+                                <li>• Two-Way Talk</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Ranger
+                                        S2</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Ranger%20S2%20IDR%201.399.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 3)">
+                        <img src="../images/cctv/imou/4.jpg" alt="Imou Ranger RC"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.439.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Ranger RC</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Home Indoor Wifi Camera
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 5MP 3K Resolution</li>
+                                <li>• Human & Motion Detection</li>
+                                <li>• Built-in Siren</li>
+                                <li>• Abnormal Sound Alarm</li>
+                                <li>• Night Vision</li>
+                                <li>• Two-Way Talk</li>
+                                <li>• One Touch Call</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Ranger RC
+                                        5MP</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Ranger%20RC%20IDR%201.439.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 4)">
+                        <img src="../images/cctv/imou/5.jpg" alt="Imou Ranger Dual"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.679.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Ranger Dual</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Home Indoor Wifi Camera
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 3MP Fixed Lens & 3MP PT Lens</li>
+                                <li>• 8x Digital Zoom</li>
+                                <li>• Smart Tracking</li>
+                                <li>• Smart Full Color Night Vision</li>
+                                <li>• Two-Way Audio</li>
+                                <li>• Supports Wifi & LAN Port</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Ranger
+                                        Dual</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Ranger%20Dual%20IDR%201.679.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <!-- Image -->
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 5)">
+                        <img src="../images/cctv/imou/6.jpg" alt="Imou Ranger A1"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6">
+                        <!-- Price -->
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.329.000
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Ranger A1</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Wifi Pan & Tilt Indoor Camera
+                        </p>
+
+                        <!-- Spesifikasi -->
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 3MP 2K Resolution</li>
+                                <li>• Panoramic 360° View</li>
+                                <li>• Privacy Mode</li>
+                                <li>• Infrared Night Vision</li>
+                                <li>• Smart Tracking</li>
+                                <li>• Two-Way Audio</li>
+                                <li>• Human Detection</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                                <li>• LAN Port</li>
+                                <li>• Built-in Siren</li>
+                                <li>• Abnormal Sound Alarm</li>
+                                <li>• ONVIF</li>
+                            </ul>
+                        </details>
+
+                        <!-- Paket -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Ranger A1
+                                        3MP</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA -->
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Ranger%20A1%20IDR%201.329.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 7 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 6)">
+                        <img src="../images/cctv/imou/7.jpg" alt="Imou Cruiser 2"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.759.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Cruiser 2</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Smart Home Pan & Tilt Indoor Wifi Camera
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 3MP 3K Resolution</li>
+                                <li>• Full Color Night Vision</li>
+                                <li>• Panoramic Pan & Tilt</li>
+                                <li>• Smart Tracking</li>
+                                <li>• IP66 Weather Resistant</li>
+                                <li>• Human & Motion Detection</li>
+                                <li>• Support LAN & WiFi 6</li>
+                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                                <li>• Active Deterrence</li>
+                                <li>• Vehicle Detection</li>
+                                <li>• 8x Digital Zoom</li>
+                                <li>• 110dB Siren</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Cruiser
+                                        2</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Cruiser%202%20IDR%201.759.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 8 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <!-- Image -->
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 7)">
+                        <img src="../images/cctv/imou/8.jpg" alt="Imou Bullet 2E 2MP"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6">
+                        <!-- Price -->
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.419.000
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Bullet 2E 2MP</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Colorful world, even at night
+                        </p>
+
+                        <!-- Spesifikasi -->
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 2MP 1080P Resolution</li>
+                                <li>• Human Detection</li>
+                                <li>• Smart Color Night Vision</li>
+                                <li>• Built-in Spotlight</li>
+                                <li>• Built-in Microphone</li>
+                                <li>• Dual Antennas & MIMO</li>
+                                <li>• IP67 Weatherproof</li>
+                                <li>• Supports MicroSD Card (Up to 512 GB)</li>
+                            </ul>
+                        </details>
+
+                        <!-- Paket -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>1 Kamera Bullet 2E 2MP</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Terminal 1 Lubang 1 Unit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Jasa Pasang & Konfigurasi</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA -->
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Bullet%202E%202MP%20IDR%201.419.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 9 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 8)">
+                        <img src="../images/cctv/imou/9.jpg" alt="Imou Bullet 2E 3MP"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.459.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Bullet 2E 3MP</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Colorful world, even at night
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 3MP 2K Resolution</li>
+                                <li>• Human Detection</li>
+                                <li>• Smart Color Night Vision</li>
+                                <li>• Built-in Spotlight</li>
+                                <li>• Built-in Microphone</li>
+                                <li>• Dual Antennas & MIMO</li>
+                                <li>• IP67 Weatherproof</li>
+                                <li>• Supports MicroSD Card (Up to 512 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Bullet 2E
+                                        3MP</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Bullet%202E%203MP%20IDR%201.459.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Product 10 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 9)">
+                        <img src="../images/cctv/imou/10.jpg" alt="Imou Bullet 2E 5MP"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="p-6">
+                        <div
+                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
+                            IDR 1.519.000
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-1 text-blue-600">Imou Bullet 2E 5MP</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Colorful world, even at night
+                        </p>
+
+                        <details class="mb-5 group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
+                                <span>Spesifikasi</span>
+                                <span class="transition group-open:rotate-45">+</span>
+                            </summary>
+
+                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                                <li>• 5MP 3K Resolution</li>
+                                <li>• Human Detection</li>
+                                <li>• Smart Color Night Vision</li>
+                                <li>• Built-in Spotlight</li>
+                                <li>• Built-in Microphone</li>
+                                <li>• Dual Antennas & MIMO</li>
+                                <li>• IP67 Weatherproof</li>
+                                <li>• Supports MicroSD Card (Up to 512 GB)</li>
+                            </ul>
+                        </details>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera Bullet 2E
+                                        5MP</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
+                                        Unit</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
+                                        Konfigurasi</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/6281291050009?text=Saya%20tertarik%20dengan%20Imou%20Bullet%202E%205MP%20IDR%201.519.000"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Butuh Solusi Keamanan?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Tim ahli kami siap membantu Anda memilih produk Imou yang tepat untuk kebutuhan Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/6281291050009"
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition">
+                    <i class="fab fa-whatsapp text-xl mr-2"></i> Chat WhatsApp
+                </a>
+                <a href="tel:6281291050009"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition">
+                    <i class="fas fa-phone-alt mr-2"></i> (081) 2910-50009
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Tentang Kami -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Tentang Kami</h3>
+                    <p class="mb-4">ZAYYAN TECHNO INTEGRASI adalah penyedia IT solution terpercaya Jabodetabek, melayani
+                        instalasi CCTV, jaringan, kelistrikan, dan berbagai kebutuhan IT lainnya.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Layanan -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Pemasangan CCTV</a></li>
+                        <li><a href="#" class="hover:text-white transition">Maintenance CCTV</a></li>
+                        <li><a href="#" class="hover:text-white transition">Perbaikan CCTV</a></li>
+                        <li><a href="#" class="hover:text-white transition">Konsultasi Gratis</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pendampingan Proyek</a></li>
+                    </ul>
+                </div>
+
+                <!-- Produk -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Produk</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-white font-medium mb-2">CCTV</h4>
+                            <ul class="space-y-1">
+                                <li><a href="hikvision.html" class="hover:text-white transition">Hikvision</a></li>
+                                <li><a href="dahua.html" class="text-red-500 hover:text-red-400 transition">Dahua</a>
+                                </li>
+                                <li><a href="ezviz.html" class="hover:text-white transition">Ezviz</a></li>
+                                <li><a href="imou.html" class="hover:text-white transition">Imou</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Router</h4>
+                            <ul class="space-y-1">
+                                <li><a href="tplink.html" class="hover:text-white transition">TP-Link</a></li>
+                                <li><a href="tenda.html" class="hover:text-white transition">Tenda</a></li>
+                                <li><a href="xiaomi.html" class="hover:text-white transition">Xiaomi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-red-500"></i>
+                            <span>Jl. Kapten Yusuf Jl. Kebandungan I, Bogor, Jawa Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-red-500"></i>
+                            <a href="tel:6281291050009" class="hover:text-white">+62 878-9284-3447</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-red-500"></i>
+                            <a href="https://wa.me/6281291050009" class="hover:text-white">+62 878-9284-3447</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="far fa-envelope mr-3 text-red-500"></i>
+                            <a href="mailto:zayyantechnointegrasi@gmail.com"
+                                class="hover:text-white">zayyantechnointegrasi@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; 2025 ZAYYAN TECHNO INTEGRASI. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Syarat & Ketentuan</a>
+                        <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281291050009"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-[60] hidden flex items-center justify-center">
+        <div class="relative w-full h-full flex flex-col items-center justify-center p-4">
+            <button onclick="closeImageModal()"
+                class="absolute top-4 right-4 text-white hover:text-gray-300 transition z-[70]">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <div class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center">
+                <button onclick="previousImage()"
+                    class="absolute left-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain mx-auto">
+                <button onclick="nextImage()"
+                    class="absolute right-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+            </div>
+            <div class="text-white text-center mt-4"><span id="imageCounter">1 / 10</span></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        let currentImageIndex = 0;
+        let currentBrand = '';
+
+        const imageSets = {
+            imou: [
+                '../images/cctv/imou/1.jpg',
+                '../images/cctv/imou/2.jpg',
+                '../images/cctv/imou/3.jpg',
+                '../images/cctv/imou/4.jpg',
+                '../images/cctv/imou/5.jpg',
+                '../images/cctv/imou/6.jpg',
+                '../images/cctv/imou/7.jpg',
+                '../images/cctv/imou/8.jpg',
+                '../images/cctv/imou/9.jpg',
+                '../images/cctv/imou/10.jpg'
+            ]
+        };
+
+        function openImageModal(brand, imageIndex) {
+            currentBrand = brand;
+            currentImageIndex = imageIndex;
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            updateModalImage();
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + imageSets[currentBrand].length) % imageSets[currentBrand].length;
+            updateModalImage();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % imageSets[currentBrand].length;
+            updateModalImage();
+        }
+
+        function updateModalImage() {
+            const modalImage = document.getElementById('modalImage');
+            const imageCounter = document.getElementById('imageCounter');
+            modalImage.src = imageSets[currentBrand][currentImageIndex];
+            imageCounter.textContent = `${currentImageIndex + 1} / ${imageSets[currentBrand].length}`;
+        }
+
+        document.addEventListener('keydown', function (e) {
+            const modal = document.getElementById('imageModal');
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeImageModal();
+                if (e.key === 'ArrowLeft') previousImage();
+                if (e.key === 'ArrowRight') nextImage();
+            }
+        });
+
+        document.getElementById('imageModal').addEventListener('click', function (e) {
+            if (e.target === this) closeImageModal();
+        });
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+
+</html>
