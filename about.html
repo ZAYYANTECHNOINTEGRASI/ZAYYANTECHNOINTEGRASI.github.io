@@ -26,248 +26,63 @@
 
 <body class="font-sans text-gray-800 bg-gray-50">
     <!-- Header/Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold text-primary">
-                    ZAYYAN TECHNO INTEGRASI
-                </a>
-            </div>
-
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="font-medium hover:text-primary transition">Beranda</a>
-
-                <!-- Desktop Dropdown -->
-                <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
-                    @mouseleave="open = false">
-                    <button @click="open = !open"
-                        class="font-medium hover:text-primary transition flex items-center focus:outline-none"
-                        :class="{'text-primary': open}">
-                        <span>Produk</span>
-                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200"
-                            :class="{'transform rotate-180': open}"></i>
-                    </button>
-                    <div class="px-4 py-2 text-sm text-gray-700 font-medium border-b border-gray-100">CCTV</div>
-                    <a href="products/hikvision.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-blue-500"></i> Hikvision
-                    </a>
-                    <a href="products/dahua.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-red-500"></i> Dahua
-                    </a>
-                    <a href="products/ezviz.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-purple-500"></i> Ezviz
-                    </a>
-                    <a href="products/imou.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-yellow-500"></i> Imou
-                    </a>
-                    <a href="products/uniview.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-green-500"></i> Uniview
-                    </a>
-                    <a href="products/hilook.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-orange-600"></i> Hilook
-                    </a>
-                    <a href="products/tiandy.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-camera mr-2 text-indigo-500"></i> Tiandy
-                    </a>
-                    <div class="px-4 py-2 text-sm text-gray-700 font-medium border-t border-b border-gray-100 mt-1">
-                        Router</div>
-                    <a href="products/tplink.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-wifi mr-2 text-blue-400"></i> TP-Link
-                    </a>
-                    <a href="products/tenda.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-wifi mr-2 text-orange-500"></i> Tenda
-                    </a>
-                    <a href="products/xiaomi.html"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                        <i class="fas fa-wifi mr-2 text-orange-300"></i> Xiaomi
-                    </a>
-                </div>
-        </div>
-        <a href="index.html#layanan" class="font-medium hover:text-primary transition">Layanan</a>
-        <a href="index.html#paket" class="font-medium hover:text-primary transition">Paket</a>
-        <a href="about.html" class="text-primary font-medium">Tentang Kami</a>
-        <a href="contact.html" class="font-medium hover:text-primary transition">Kontak</a>
-        </nav>
-
-        <div class="flex items-center space-x-4">
-            <a href="https://wa.me/6281291050009"
-                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center transition">
-                <i class="fab fa-whatsapp mr-2"></i> <span class="hidden sm:inline">Chat WhatsApp</span>
-            </a>
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div x-data="{ open: false }" class="md:hidden">
-            <button @click="open = !open" class="text-gray-600 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-
-            <!-- Mobile Menu Overlay -->
-            <div x-show="open" @click.away="open = false" class="fixed inset-0 bg-black bg-opacity-50 z-40"
-                style="display: none;"></div>
-
-            <!-- Mobile Menu Content -->
-            <div x-show="open" class="fixed inset-y-0 right-0 w-4/5 bg-white shadow-lg z-50 overflow-y-auto"
-                style="display: none;">
-                <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                    <span class="text-lg font-semibold">Menu</span>
-                    <button @click="open = false" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-
-                <nav class="p-4 space-y-2">
-                    <a href="index.html"
-                        class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Beranda</a>
-
-                    <!-- Mobile Products Dropdown -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="w-full flex justify-between items-center py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium"
-                            :class="{'text-primary': open}">
-                            <span>Produk</span>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-200"
-                                :class="{'transform rotate-180': open}"></i>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-75"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4 mt-1 space-y-1">
-                            <div class="text-sm font-medium text-gray-500 py-1">CCTV</div>
-                            <a href="products/hikvision.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Hikvision</a>
-                            <a href="products/dahua.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Dahua</a>
-                            <a href="products/ezviz.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Ezviz</a>
-                            <a href="products/imou.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Imou</a>
-                            <a href="products/uniview.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Uniview</a>
-
-                            <div class="text-sm font-medium text-gray-500 py-1">Router</div>
-                            <a href="products/tplink.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">TP-Link</a>
-                            <a href="products/tenda.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Tenda</a>
-                            <a href="products/xiaomi.html"
-                                class="block py-2 px-4 text-gray-700 hover:bg-gray-50 rounded-lg">Xiaomi</a>
-                        </div>
-                    </div>
-
-                    <a href="index.html#layanan"
-                        class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Layanan</a>
-                    <a href="index.html#paket"
-                        class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Paket</a>
-                    <a href="about.html"
-                        class="block py-3 px-4 text-primary hover:bg-gray-100 rounded-lg font-medium">Tentang
-                        Kami</a>
-                    <a href="contact.html"
-                        class="block py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg font-medium">Kontak</a>
-                </nav>
-            </div>
-        </div>
-        </div>
-    </header>
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header-container').innerHTML = html;
+            });
+    </script>
 
     <!-- Hero Section -->
-    <section class="relative h-[80vh] overflow-hidden">
-        <!-- Slides Container -->
-        <div class="relative w-full h-full" id="hero-slideshow">
-            <!-- Slide 1 -->
-            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100" id="slide-1">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
-                    <div class="container mx-auto px-4 text-white text-center">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Paket CCTV Bogor <span
-                                class="text-green-400">Murah & Terbaik</span></h1>
-                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Distributor resmi dan jasa pemasangan CCTV
-                            profesional di Bogor dan sekitarnya.</p>
-                        <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="#paket"
-                                class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
-                                Lihat Paket
+    <section class="relative h-[90vh] overflow-hidden">
+        <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        Layanan Teknologi Terpercaya <span class="text-green-400">di Bogor</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                        Solusi lengkap untuk kebutuhan teknologi dan keamanan properti Anda.
+                    </p>
+
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg max-w-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">Bersedia melayani :</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">1</span>
+                                <span class="text-gray-200">Pemasangan jasa instalasi router internet dan
+                                    perbaikan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">2</span>
+                                <span class="text-gray-200">Instalasi listrik dan perbaikan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">3</span>
+                                <span class="text-gray-200">Pemasangan CCTV dan perbaikan</span>
+                            </li>
+                        </ul>
+                        <div class="mt-6 flex flex-wrap gap-4">
+                            <a href="https://wa.me/6287892843447"
+                                class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi Kami
                             </a>
-                            <a href="https://wa.me/6281291050009"
-                                class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-full flex items-center justify-center transition transform hover:scale-105">
-                                <i class="fab fa-whatsapp text-green-500 mr-2 text-xl"></i> Konsultasi Gratis
+                            <a href="/index.html#layanan"
+                                class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
+                                Layanan Kami <i class="fas fa-arrow-down ml-2"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                    alt="Sistem Keamanan CCTV Modern" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0" id="slide-2">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
-                    <div class="container mx-auto px-4 text-white text-center">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Pemasangan CCTV <span
-                                class="text-green-400">Profesional</span></h1>
-                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Tim teknisi berpengalaman siap melayani
-                            pemasangan di seluruh wilayah Bogor.</p>
-                        <a href="tel:6281291050009"
-                            class="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
-                            <i class="fas fa-phone-alt mr-2"></i> Hubungi Kami
-                        </a>
-                    </div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                    alt="Pemasangan CCTV Profesional" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0" id="slide-3">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
-                    <div class="container mx-auto px-4 text-white text-center">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Produk <span
-                                class="text-green-400">Berkualitas</span></h1>
-                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Menyediakan berbagai merk CCTV terbaik
-                            dengan kualitas terjamin.</p>
-                        <a href="#"
-                            class="inline-block bg-accent hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
-                            Lihat Produk <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                    alt="Produk CCTV Berkualitas" class="w-full h-full object-cover">
             </div>
         </div>
-
-        <!-- Navigation Dots -->
-        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
-            <button class="w-3 h-3 rounded-full bg-white" onclick="showSlide(0)"></button>
-            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"
-                onclick="showSlide(1)"></button>
-            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"
-                onclick="showSlide(2)"></button>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button
-            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition z-10"
-            onclick="prevSlide()">
-            <i class="fas fa-chevron-left text-xl"></i>
-        </button>
-        <button
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition z-10"
-            onclick="nextSlide()">
-            <i class="fas fa-chevron-right text-xl"></i>
-        </button>
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+            alt="Layanan Teknologi" class="w-full h-full object-cover">
     </section>
 
     <!-- Tentang Kami -->
@@ -277,10 +92,11 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang Kami</h2>
                 <div class="h-1 w-20 bg-primary mx-auto mb-8"></div>
                 <p class="text-gray-600 leading-relaxed">
-                    ZAYYAN TECHNO INTEGRASI adalah perusahaan yang bergerak di bidang penyediaan solusi sistem keamanan
-                    dan pengawasan berbasis teknologi terdepan. Berdiri sejak 2010, kami telah dipercaya oleh ribuan
-                    pelanggan baik perorangan, bisnis, maupun instansi pemerintah dalam menyediakan produk dan layanan
-                    CCTV berkualitas tinggi.
+                    ZAYYAN TECHNO INTEGRASI adalah penyedia jasa IT solution terpercaya di Bogor yang melayani
+                    wilayah Jakarta, Bogor, Depok, Tangerang, dan bekasi (Jabodetabek), Kami hadir untuk memberikan
+                    solusi instalasi dan perbaikan. produk-produk CCTV, Internet, dan kelistrikan AC-DC berkualitas
+                    dari merek ternama seperti Hikvision, Dahua, Hilook, Ezviz, tmou, Uniview, Tp-link, Tenda,
+                    Ruijie dan berbagai brand lainnya
                 </p>
             </div>
 
@@ -381,11 +197,11 @@
             <h2 class="text-3xl font-bold mb-6">Siap Meningkatkan Keamanan Anda?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Konsultasikan kebutuhan keamanan Anda dengan tim ahli kami</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/6281291050009"
+                <a href="https://wa.me/6287892843447"
                     class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full flex items-center justify-center transition transform hover:scale-105">
                     <i class="fab fa-whatsapp text-2xl mr-2"></i> Chat WhatsApp
                 </a>
-                <a href="tel:6281291050009"
+                <a href="tel:6287892843447"
                     class="bg-transparent hover:bg-white hover:bg-opacity-10 border-2 border-white text-white font-bold py-3 px-8 rounded-full flex items-center justify-center transition transform hover:scale-105">
                     <i class="fas fa-phone-alt mr-2"></i> Hubungi Kami
                 </a>
@@ -394,84 +210,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
-                <!-- Tentang Kami -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Tentang Kami</h3>
-                    <p class="mb-4">ZAYYAN TECHNO INTEGRASI adalah penyedia solusi keamanan dan pengawasan terpercaya di
-                        Indonesia, menyediakan produk dan layanan CCTV berkualitas tinggi.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Link Cepat -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Link Cepat</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-white">Beranda</a></li>
-                        <li><a href="about.html" class="hover:text-white">Tentang Kami</a></li>
-                        <li><a href="index.html#layanan" class="hover:text-white">Layanan</a></li>
-                        <li><a href="index.html#paket" class="hover:text-white">Paket</a></li>
-                        <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
-                    </ul>
-                </div>
-
-                <!-- Kontak -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Hubungi Kami</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
-                            <span>Jl. Contoh No. 123, Bogor, Jawa Barat, Indonesia</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
-                            <a href="tel:6281291050009" class="hover:text-white">+62 812-9105-0009</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary"></i>
-                            <a href="mailto:info@gosecurecctv.com" class="hover:text-white">info@gosecurecctv.com</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-whatsapp mr-3 text-primary"></i>
-                            <a href="https://wa.me/6281291050009" class="hover:text-white">+62 812-9105-0009</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Jam Kerja -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Jam Kerja</h3>
-                    <ul class="space-y-2">
-                        <li class="flex justify-between">
-                            <span>Senin - Jumat</span>
-                            <span>08:00 - 17:00 WIB</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Sabtu</span>
-                            <span>09:00 - 15:00 WIB</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Minggu</span>
-                            <span>Tutup</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p>&copy; 2025 ZAYYAN TECHNO INTEGRASI. Semua Hak Dilindungi.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            });
+    </script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6281291050009"
+    <a href="https://wa.me/6287892843447"
         class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-110 z-50">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
