@@ -2,623 +2,747 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hilook - ZAYYAN TECHNO INTEGRASI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hilook - ZAYYAN TECHNO INTEGRASI</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <meta name="description"
+                content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek." />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a56db',
-                        secondary: '#1e40af',
-                        accent: '#10b981'
-                    }
+        <meta name="robots" content="index, follow" />
+        <script>
+                tailwind.config = {
+                        theme: {
+                                extend: {
+                                        colors: {
+                                                primary: '#1a56db',
+                                                secondary: '#1e40af',
+                                                accent: '#10b981'
+                                        }
+                                }
+                        }
                 }
-            }
-        }
-    </script>
+        </script>
 
 </head>
 
 <body class="font-sans text-gray-800 bg-gray-50">
-    <div id="header-container"></div>
-    <script>
-        fetch('../header.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('header-container').innerHTML = html;
-            });
-    </script>
+        <div id="header-container"></div>
+        <script>
+                fetch('../header.html')
+                        .then(res => res.text())
+                        .then(html => {
+                                document.getElementById('header-container').innerHTML = html;
+                        });
+        </script>
 
-    <!-- Hero Section -->
-    <section class="relative bg-gray-900 text-white">
-        <div class="container mx-auto px-4 py-20 md:py-28">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Hilook</h1>
-                <p class="text-xl text-gray-300 mb-8">
-                    Solusi keamanan terdepan dengan teknologi canggih untuk kebutuhan pengawasan terbaik Anda.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#produk"
-                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition">
-                        Lihat Produk
-                    </a>
-                    <a href="#konsultasi"
-                        class="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition">
-                        Konsultasi Gratis
-                    </a>
+        <!-- Hero Section -->
+        <section class="relative bg-gray-900 text-white">
+                <div class="container mx-auto px-4 py-20 md:py-28">
+                        <div class="max-w-3xl mx-auto text-center">
+                                <h1 class="text-4xl md:text-5xl font-bold mb-6">Hilook</h1>
+                                <p class="text-xl text-gray-300 mb-8">
+                                        Solusi keamanan terdepan dengan teknologi canggih untuk kebutuhan pengawasan
+                                        terbaik Anda.
+                                </p>
+                                <div class="flex flex-wrap justify-center gap-4">
+                                        <a href="#produk"
+                                                class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition">
+                                                Lihat Produk
+                                        </a>
+                                        <a href="#konsultasi"
+                                                class="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition">
+                                                Konsultasi Gratis
+                                        </a>
+                                </div>
+                        </div>
                 </div>
-            </div>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
-    </section>
+                <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        </section>
 
-    <!-- Product Categories -->
-    <section class="py-12 bg-gray-50" id="produk">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kategori Produk</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Temukan berbagai produk Uniview berkualitas tinggi untuk memenuhi kebutuhan keamanan Anda.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 0)">
-                        <img src="../images/cctv/hilook/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 2.799.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>30 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%202%20Kamera%20Hilook%20IDR%202.799.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+        <!-- Product Categories -->
+        <section class="py-12 bg-gray-50" id="produk">
+                <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kategori Produk</h2>
+                                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                                <p class="text-gray-600 max-w-2xl mx-auto">
+                                        Temukan berbagai produk Uniview berkualitas tinggi untuk memenuhi kebutuhan
+                                        keamanan Anda.
+                                </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                                <!-- Product 1 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 0)">
+                                                <img src="../images/cctv/hilook/1.jpg" alt="Paket CCTV 2 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 2.799.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 4 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 500 GB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>30
+                                                                        m
+                                                                        Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 4 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%202%20Kamera%20Hilook%20IDR%202.799.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 1)">
-                        <img src="../images/cctv/hilook/2.jpg" alt="Paket CCTV 3 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 3 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 3.499.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>3
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>45 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>3
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%203%20Kamera%20Hilook%20IDR%203.499.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 2 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 1)">
+                                                <img src="../images/cctv/hilook/2.jpg" alt="Paket CCTV 3 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 3 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 3.499.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 4 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>3
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 500 GB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>45
+                                                                        m
+                                                                        Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>3
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 4 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%203%20Kamera%20Hilook%20IDR%203.499.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 2)">
-                        <img src="../images/cctv/hilook/3.jpg" alt="Paket CCTV 4 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 4 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 4.099.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>60 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%204%20Kamera%20Hilook%20IDR%204.099.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 3 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 2)">
+                                                <img src="../images/cctv/hilook/3.jpg" alt="Paket CCTV 4 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 4 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 4.099.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 4 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 500 GB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>60
+                                                                        m
+                                                                        Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 4 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%204%20Kamera%20Hilook%20IDR%204.099.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 3)">
-                        <img src="../images/cctv/hilook/4.jpg" alt="Paket CCTV 5 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 5 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 5.499.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>5
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>75 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>5
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%205%20Kamera%20Hilook%20IDR%205.499.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 4 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 3)">
+                                                <img src="../images/cctv/hilook/4.jpg" alt="Paket CCTV 5 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 5 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 5.499.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 4 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>5
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 1 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>75
+                                                                        m
+                                                                        Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>5
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%205%20Kamera%20Hilook%20IDR%205.499.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 4)">
-                        <img src="../images/cctv/hilook/5.jpg" alt="Paket CCTV 6 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 6 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 6.199.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 8 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>90 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>12
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%206%20Kamera%20Hilook%20IDR%206.199.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 5 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 4)">
+                                                <img src="../images/cctv/hilook/5.jpg" alt="Paket CCTV 6 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 6 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 6.199.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 8 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 1 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>90
+                                                                        m
+                                                                        Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>12
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%206%20Kamera%20Hilook%20IDR%206.199.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 5)">
-                        <img src="../images/cctv/hilook/6.jpg" alt="Paket CCTV 7 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 7 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 6.899.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 8 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>7
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>105
-                                    m Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>14
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>7
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%207%20Kamera%20Hilook%20IDR%206.899.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 6 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 5)">
+                                                <img src="../images/cctv/hilook/6.jpg" alt="Paket CCTV 7 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 7 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 6.899.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 8 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>7
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 1 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>105
+                                                                        m Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>14
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>7
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%207%20Kamera%20Hilook%20IDR%206.899.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 7 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 6)">
-                        <img src="../images/cctv/hilook/7.jpg" alt="Paket CCTV 8 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 8 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 7.399.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 8 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>120
-                                    m Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>16
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%208%20Kamera%20Hilook%20IDR%207.399.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 7 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 6)">
+                                                <img src="../images/cctv/hilook/7.jpg" alt="Paket CCTV 8 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 8 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 7.399.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 8 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 1 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>120
+                                                                        m Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>16
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%208%20Kamera%20Hilook%20IDR%207.399.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 8 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 7)">
-                        <img src="../images/cctv/hilook/8.jpg" alt="Paket CCTV 9 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 9 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 9.599.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 16 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>9
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>135
-                                    m Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>18
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>9
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%209%20Kamera%20Hilook%20IDR%209.599.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 8 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 7)">
+                                                <img src="../images/cctv/hilook/8.jpg" alt="Paket CCTV 9 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 9 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 9.599.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 16 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>9
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 2 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>135
+                                                                        m Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>18
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>9
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%209%20Kamera%20Hilook%20IDR%209.599.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 9 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 8)">
-                        <img src="../images/cctv/hilook/9.jpg" alt="Paket CCTV 10 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 10 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 10.199.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 16 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>150
-                                    m Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>20
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%2010%20Kamera%20Hilook%20IDR%2010.199.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 9 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 8)">
+                                                <img src="../images/cctv/hilook/9.jpg" alt="Paket CCTV 10 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 10 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 10.199.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 16 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 2 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>150
+                                                                        m Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>20
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%2010%20Kamera%20Hilook%20IDR%2010.199.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-                <!-- Product 10 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 9)">
-                        <img src="../images/cctv/hilook/10.jpg" alt="Paket CCTV 11 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 11 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 10.799.000</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 16 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>11
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>165
-                                    m Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>22
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>11
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 8 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%2011%20Kamera%20Hilook%20IDR%2010.799.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
+                                <!-- Product 10 -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                        <div class="bg-gray-100 overflow-hidden cursor-pointer"
+                                                onclick="openImageModal('hilook', 9)">
+                                                <img src="../images/cctv/hilook/10.jpg" alt="Paket CCTV 11 Kamera"
+                                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        </div>
+                                        <div class="p-6">
+                                                <h3 class="text-xl font-bold mb-1">Paket CCTV 11 Kamera</h3>
+                                                <p class="text-lg font-semibold text-primary mb-4">IDR 10.799.000</p>
+                                                <ul class="space-y-2 mb-6">
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
+                                                                        Pasang & Konfigurasi</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi
+                                                                        Unit 2 Tahun</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        DVR 16 Channel</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>11
+                                                                        Camera Indoor / Outdoor 2MP</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
+                                                                        Hardisk 2 TB</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>165
+                                                                        m Coaxial Cable</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>22
+                                                                        Konektor BNC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>11
+                                                                        Konektor DC</span></li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel
+                                                                        HDMI 1,5 Meter</span>
+                                                        </li>
+                                                        <li class="flex items-start"><i
+                                                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power
+                                                                        Supply 8 Port</span>
+                                                        </li>
+                                                </ul>
+                                                <a href="https://wa.me/6287892843447?text=Paket%20CCTV%2011%20Kamera%20Hilook%20IDR%2010.799.000"
+                                                        class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
+                                                        Order Sekarang
+                                                </a>
+                                        </div>
+                                </div>
 
-    </section>
+        </section>
 
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white" id="konsultasi">
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white" id="konsultasi">
 
-        <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4">
 
-            <div class="max-w-4xl mx-auto text-center">
+                        <div class="max-w-4xl mx-auto text-center">
 
-                <h2 class="text-3xl font-bold mb-4">Konsultasikan Kebutuhan Keamanan Anda</h2>
+                                <h2 class="text-3xl font-bold mb-4">Konsultasikan Kebutuhan Keamanan Anda</h2>
 
-                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                                <p class="text-xl mb-8 max-w-2xl mx-auto">
 
-                    Tim ahli kami siap membantu Anda memilih solusi keamanan terbaik untuk properti Anda.
+                                        Tim ahli kami siap membantu Anda memilih solusi keamanan terbaik untuk properti
+                                        Anda.
 
-                </p>
+                                </p>
 
 
 
-                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                                <div class="grid md:grid-cols-3 gap-8 mt-12">
 
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+                                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
 
-                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <div
+                                                        class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
 
-                            <i class="fas fa-phone-alt text-2xl"></i>
+                                                        <i class="fas fa-phone-alt text-2xl"></i>
+
+                                                </div>
+
+                                                <h3 class="text-xl font-semibold mb-2">Telepon</h3>
+
+                                                <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
+                                                <a href="tel:6287892843447"
+                                                        class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
+
+                                                        Hubungi Sekarang
+
+                                                </a>
+
+                                        </div>
+
+
+
+                                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+
+                                                <div
+                                                        class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+
+                                                        <i class="fab fa-whatsapp text-2xl"></i>
+
+                                                </div>
+
+                                                <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+
+                                                <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
+
+                                                <a href="https://wa.me/6287892843447"
+                                                        class="inline-block bg-white text-green-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
+
+                                                        Chat WhatsApp
+
+                                                </a>
+
+                                        </div>
+
+
+
+                                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+
+                                                <div
+                                                        class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+
+                                                        <i class="fas fa-envelope text-2xl"></i>
+
+                                                </div>
+
+                                                <h3 class="text-xl font-semibold mb-2">Email</h3>
+
+                                                <p class="text-blue-100 mb-4">zayyantechnointegrasi@gmail.com</p>
+
+                                                <a href="mailto:zayyantechnointegrasi@gmail.com"
+                                                        class="inline-block bg-white text-red-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
+
+                                                        Kirim Email
+
+                                                </a>
+
+                                        </div>
+
+                                </div>
 
                         </div>
 
-                        <h3 class="text-xl font-semibold mb-2">Telepon</h3>
-
-                        <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
-                        <a href="tel:6287892843447"
-                            class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Hubungi Sekarang
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-
-                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                            <i class="fab fa-whatsapp text-2xl"></i>
-
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
-
-                        <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
-
-                        <a href="https://wa.me/6287892843447"
-                            class="inline-block bg-white text-green-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Chat WhatsApp
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-
-                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                            <i class="fas fa-envelope text-2xl"></i>
-
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-2">Email</h3>
-
-                        <p class="text-blue-100 mb-4">zayyantechnointegrasi@gmail.com</p>
-
-                        <a href="mailto:zayyantechnointegrasi@gmail.com"
-                            class="inline-block bg-white text-red-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Kirim Email
-
-                        </a>
-
-                    </div>
-
                 </div>
 
-            </div>
+        </section>
 
-        </div>
+        <!-- Footer -->
+        <div id="footer-container"></div>
+        <script>
+                fetch('../footer.html')
+                        .then(res => res.text())
+                        .then(html => {
+                                document.getElementById('footer-container').innerHTML = html;
+                        });
+        </script>
 
-    </section>
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/6287892843447"
+                class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
+                <i class="fab fa-whatsapp"></i>
+        </a>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
-    <script>
-        fetch('../footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer-container').innerHTML = html;
-            });
-    </script>
+        <script>
+                // Mobile menu toggle
+                document.addEventListener('DOMContentLoaded', function () {
+                        const mobileMenuButton = document.getElementById('mobile-menu-button');
+                        const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6287892843447"
-        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+                        // Toggle mobile menu
+                        mobileMenuButton.addEventListener('click', function (e) {
+                                e.stopPropagation();
+                                mobileMenu.classList.toggle('hidden');
+                        });
 
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', function (e) {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 50
-        });
-    </script>
+                        // Close mobile menu when clicking outside
+                        document.addEventListener('click', function (e) {
+                                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                                        mobileMenu.classList.add('hidden');
+                                }
+                        });
+                });
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+                AOS.init({
+                        duration: 800,
+                        easing: 'ease-out-cubic',
+                        once: true,
+                        offset: 50
+                });
+        </script>
 </body>
 
 </html>
