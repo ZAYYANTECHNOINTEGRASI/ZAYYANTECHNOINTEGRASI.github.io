@@ -1,692 +1,938 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tiandy - ZAYYAN TECHNO INTEGRASI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <meta name="description"
-        content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek." />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <meta
+      name="description"
+      content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek."
+    />
 
     <meta name="robots" content="index, follow" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a56db',
-                        secondary: '#1e40af',
-                        accent: '#10b981'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a56db",
+              secondary: "#1e40af",
+              accent: "#10b981",
+            },
+          },
+        },
+      };
     </script>
+  </head>
 
-</head>
-
-<body class="font-sans text-gray-800 bg-gray-50">
+  <body class="font-sans text-gray-800 bg-gray-50">
     <!-- Header/Navbar -->
     <div id="header-container"></div>
     <script>
-        fetch('../header.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('header-container').innerHTML = html;
-            });
+      fetch("../header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header-container").innerHTML = html;
+        });
     </script>
 
     <!-- Hero Section -->
     <section class="relative bg-gray-900 text-white">
-        <div class="container mx-auto px-4 py-20 md:py-28">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Tiandy</h1>
-                <p class="text-xl text-gray-300 mb-8">
-                    Solusi keamanan terdepan dengan teknologi canggih untuk kebutuhan pengawasan terbaik Anda.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#produk"
-                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition">
-                        Lihat Produk
-                    </a>
-                    <a href="#konsultasi"
-                        class="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition">
-                        Konsultasi Gratis
-                    </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 py-20 md:py-28">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Tiandy</h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Solusi keamanan terdepan dengan teknologi canggih untuk kebutuhan
+            pengawasan terbaik Anda.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#produk"
+              class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition"
+            >
+              Lihat Produk
+            </a>
+            <a
+              href="#konsultasi"
+              class="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition"
+            >
+              Konsultasi Gratis
+            </a>
+          </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"
+      ></div>
     </section>
 
     <!-- Product Categories -->
     <section class="py-12 bg-gray-50" id="produk">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kategori Produk</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Temukan berbagai produk Tiandy berkualitas tinggi untuk memenuhi kebutuhan keamanan Anda.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 0)">
-                        <img src="../images/cctv/tiandy/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 3.899.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 5 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 30 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.899.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 1)">
-                        <img src="../images/cctv/tiandy/2.jpg" alt="Paket CCTV 3 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 3 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 4.799.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 5 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>3
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 45 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%203%20Kamera%20IDR%204.799.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 2)">
-                        <img src="../images/cctv/tiandy/3.jpg" alt="Paket CCTV 4 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 4 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 5.699.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 5 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 60 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%204%20Kamera%20IDR%205.699.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 3)">
-                        <img src="../images/cctv/tiandy/4.jpg" alt="Paket CCTV 5 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 5 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 7.399.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 5 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>5
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 75 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%205%20Kamera%20IDR%207.399.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 4)">
-                        <img src="../images/cctv/tiandy/5.jpg" alt="Paket CCTV 6 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 6 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 8.499.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 10 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>6
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 90 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%206%20Kamera%20IDR%208.499.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- Product 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 5)">
-                        <img src="../images/cctv/tiandy/6.jpg" alt="Paket CCTV 7 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 7 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 9.399.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 10 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>7
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 105 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%207%20Kamera%20IDR%209.399.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 6)">
-                        <img src="../images/cctv/tiandy/7.jpg" alt="Paket CCTV 8 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 8 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 10.299.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 10 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>8
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 1 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 120 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%208%20Kamera%20IDR%2010.299.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 7)">
-                        <img src="../images/cctv/tiandy/8.jpg" alt="Paket CCTV 9 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 9 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 12.599.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 10 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>9
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 135 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%209%20Kamera%20IDR%2012.599.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 9 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 8)">
-                        <img src="../images/cctv/tiandy/9.jpg" alt="Paket CCTV 10 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 10 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 13.499.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 10 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>10
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 150 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%2010%20Kamera%20IDR%2013.499.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 10 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 9)">
-                        <img src="../images/cctv/tiandy/10.jpg" alt="Paket CCTV 11 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 11 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 15.199.000</p>
-
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 20 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>11
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 2 TB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 165 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%2011%20Kamera%20IDR%2015.199.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Kategori Produk</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Temukan berbagai produk Tiandy berkualitas tinggi untuk memenuhi
+            kebutuhan keamanan Anda.
+          </p>
         </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 0)"
+            >
+              <img
+                src="../images/cctv/tiandy/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 3.899.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 5 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 30 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.899.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 1)"
+            >
+              <img
+                src="../images/cctv/tiandy/2.jpg"
+                alt="Paket CCTV 3 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 3 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 4.799.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 5 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>3 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 45 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%203%20Kamera%20IDR%204.799.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 2)"
+            >
+              <img
+                src="../images/cctv/tiandy/3.jpg"
+                alt="Paket CCTV 4 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 4 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 5.699.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 5 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>4 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 60 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%204%20Kamera%20IDR%205.699.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 3)"
+            >
+              <img
+                src="../images/cctv/tiandy/4.jpg"
+                alt="Paket CCTV 5 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 5 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 7.399.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 5 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>5 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 75 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%205%20Kamera%20IDR%207.399.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 4)"
+            >
+              <img
+                src="../images/cctv/tiandy/5.jpg"
+                alt="Paket CCTV 6 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 6 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 8.499.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 10 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>6 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 90 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%206%20Kamera%20IDR%208.499.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 5)"
+            >
+              <img
+                src="../images/cctv/tiandy/6.jpg"
+                alt="Paket CCTV 7 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 7 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 9.399.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 10 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>7 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 105 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%207%20Kamera%20IDR%209.399.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 6)"
+            >
+              <img
+                src="../images/cctv/tiandy/7.jpg"
+                alt="Paket CCTV 8 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 8 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 10.299.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 10 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>8 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 120 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%208%20Kamera%20IDR%2010.299.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 7)"
+            >
+              <img
+                src="../images/cctv/tiandy/8.jpg"
+                alt="Paket CCTV 9 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 9 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 12.599.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 10 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>9 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 135 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%209%20Kamera%20IDR%2012.599.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 8)"
+            >
+              <img
+                src="../images/cctv/tiandy/9.jpg"
+                alt="Paket CCTV 10 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 10 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 13.499.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 10 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>10 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 150 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%2010%20Kamera%20IDR%2013.499.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 9)"
+            >
+              <img
+                src="../images/cctv/tiandy/10.jpg"
+                alt="Paket CCTV 11 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 11 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 15.199.000
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 20 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>11 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk </span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 165 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%2011%20Kamera%20IDR%2015.199.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white" id="konsultasi">
+    <section
+      class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white"
+      id="konsultasi"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">
+            Konsultasikan Kebutuhan Keamanan Anda
+          </h2>
 
-        <div class="container mx-auto px-4">
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Tim ahli kami siap membantu Anda memilih solusi keamanan terbaik
+            untuk properti Anda.
+          </p>
 
-            <div class="max-w-4xl mx-auto text-center">
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+              <div
+                class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-phone-alt text-2xl"></i>
+              </div>
 
-                <h2 class="text-3xl font-bold mb-4">Konsultasikan Kebutuhan Keamanan Anda</h2>
+              <h3 class="text-xl font-semibold mb-2">Telepon</h3>
 
-                <p class="text-xl mb-8 max-w-2xl mx-auto">
-
-                    Tim ahli kami siap membantu Anda memilih solusi keamanan terbaik untuk properti Anda.
-
-                </p>
-
-
-
-                <div class="grid md:grid-cols-3 gap-8 mt-12">
-
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-
-                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                            <i class="fas fa-phone-alt text-2xl"></i>
-
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-2">Telepon</h3>
-
-                        <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
-                        <a href="tel:6287892843447"
-                            class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Hubungi Sekarang
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-
-                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                            <i class="fab fa-whatsapp text-2xl"></i>
-
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
-
-                        <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
-
-                        <a href="https://wa.me/6287892843447"
-                            class="inline-block bg-white text-green-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Chat WhatsApp
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-
-                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                            <i class="fas fa-envelope text-2xl"></i>
-
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-2">Email</h3>
-
-                        <p class="text-blue-100 mb-4">zayyantechnointegrasi@gmail.com</p>
-
-                        <a href="mailto:zayyantechnointegrasi@gmail.com"
-                            class="inline-block bg-white text-red-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition">
-
-                            Kirim Email
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
+              <a
+                href="tel:6287892843447"
+                class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition"
+              >
+                Hubungi Sekarang
+              </a>
             </div>
 
-        </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+              <div
+                class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fab fa-whatsapp text-2xl"></i>
+              </div>
 
+              <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+
+              <p class="text-blue-100 mb-4">+62 878-9284-3447</p>
+
+              <a
+                href="https://wa.me/6287892843447"
+                class="inline-block bg-white text-green-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition"
+              >
+                Chat WhatsApp
+              </a>
+            </div>
+
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+              <div
+                class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-envelope text-2xl"></i>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-2">Email</h3>
+
+              <p class="text-blue-100 mb-4">zayyantechnointegrasi@gmail.com</p>
+
+              <a
+                href="mailto:zayyantechnointegrasi@gmail.com"
+                class="inline-block bg-white text-red-600 hover:bg-gray-100 font-medium py-2 px-4 rounded-full transition"
+              >
+                Kirim Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <div id="footer-container"></div>
     <script>
-        fetch('../footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer-container').innerHTML = html;
-            });
+      fetch("../footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
     </script>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6287892843447"
-        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/6287892843447"
+      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-[60] hidden flex items-center justify-center">
-        <div class="relative w-full h-full flex flex-col items-center justify-center p-4">
-            <!-- Close Button -->
-            <button onclick="closeImageModal()"
-                class="absolute top-4 right-4 text-white hover:text-gray-300 transition z-70">
-                <i class="fas fa-times text-3xl"></i>
-            </button>
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-90 z-[60] hidden flex items-center justify-center"
+    >
+      <div
+        class="relative w-full h-full flex flex-col items-center justify-center p-4"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeImageModal()"
+          class="absolute top-4 right-4 text-white hover:text-gray-300 transition z-70"
+        >
+          <i class="fas fa-times text-3xl"></i>
+        </button>
 
-            <!-- Image Container -->
-            <div class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center">
-                <!-- Previous Button -->
-                <button onclick="previousImage()"
-                    class="absolute left-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
-                    <i class="fas fa-chevron-left text-xl"></i>
-                </button>
+        <!-- Image Container -->
+        <div
+          class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center"
+        >
+          <!-- Previous Button -->
+          <button
+            onclick="previousImage()"
+            class="absolute left-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center"
+          >
+            <i class="fas fa-chevron-left text-xl"></i>
+          </button>
 
-                <!-- Main Image -->
-                <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain mx-auto">
+          <!-- Main Image -->
+          <img
+            id="modalImage"
+            src=""
+            alt=""
+            class="max-w-full max-h-full object-contain mx-auto"
+          />
 
-                <!-- Next Button -->
-                <button onclick="nextImage()"
-                    class="absolute right-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
-                    <i class="fas fa-chevron-right text-xl"></i>
-                </button>
-            </div>
-
-            <!-- Image Counter -->
-            <div class="text-white text-center mt-4">
-                <span id="imageCounter">1 / 10</span>
-            </div>
+          <!-- Next Button -->
+          <button
+            onclick="nextImage()"
+            class="absolute right-4 text-white hover:text-gray-300 transition z-50 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center"
+          >
+            <i class="fas fa-chevron-right text-xl"></i>
+          </button>
         </div>
+
+        <!-- Image Counter -->
+        <div class="text-white text-center mt-4">
+          <span id="imageCounter">1 / 10</span>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', function (e) {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener("click", function (e) {
+          e.stopPropagation();
+          mobileMenu.classList.toggle("hidden");
         });
 
-        // Image Modal functionality
-        let currentImageIndex = 0;
-        let currentBrand = '';
-
-        const imageSets = {
-            tiandy: [
-                '../images/cctv/tiandy/1.jpg',
-                '../images/cctv/tiandy/2.jpg',
-                '../images/cctv/tiandy/3.jpg',
-                '../images/cctv/tiandy/4.jpg',
-                '../images/cctv/tiandy/5.jpg',
-                '../images/cctv/tiandy/6.jpg',
-                '../images/cctv/tiandy/7.jpg',
-                '../images/cctv/tiandy/8.jpg',
-                '../images/cctv/tiandy/9.jpg',
-                '../images/cctv/tiandy/10.jpg'
-            ]
-        };
-
-        function openImageModal(brand, imageIndex) {
-            currentBrand = brand;
-            currentImageIndex = imageIndex;
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const imageCounter = document.getElementById('imageCounter');
-
-            modalImage.src = imageSets[brand][imageIndex];
-            imageCounter.textContent = `${imageIndex + 1} / ${imageSets[brand].length}`;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeImageModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-
-            // Restore body scroll
-            document.body.style.overflow = 'auto';
-        }
-
-        function previousImage() {
-            currentImageIndex = (currentImageIndex - 1 + imageSets[currentBrand].length) % imageSets[currentBrand].length;
-            updateModalImage();
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % imageSets[currentBrand].length;
-            updateModalImage();
-        }
-
-        function updateModalImage() {
-            const modalImage = document.getElementById('modalImage');
-            const imageCounter = document.getElementById('imageCounter');
-
-            modalImage.src = imageSets[currentBrand][currentImageIndex];
-            imageCounter.textContent = `${currentImageIndex + 1} / ${imageSets[currentBrand].length}`;
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            const modal = document.getElementById('imageModal');
-            if (!modal.classList.contains('hidden')) {
-                if (e.key === 'Escape') {
-                    closeImageModal();
-                } else if (e.key === 'ArrowLeft') {
-                    previousImage();
-                } else if (e.key === 'ArrowRight') {
-                    nextImage();
-                }
-            }
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+            mobileMenu.classList.add("hidden");
+          }
         });
+      });
 
-        // Close modal on background click
-        document.getElementById('imageModal').addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeImageModal();
-            }
+      // Image Modal functionality
+      let currentImageIndex = 0;
+      let currentBrand = "";
+
+      const imageSets = {
+        tiandy: [
+          "../images/cctv/tiandy/1.jpg",
+          "../images/cctv/tiandy/2.jpg",
+          "../images/cctv/tiandy/3.jpg",
+          "../images/cctv/tiandy/4.jpg",
+          "../images/cctv/tiandy/5.jpg",
+          "../images/cctv/tiandy/6.jpg",
+          "../images/cctv/tiandy/7.jpg",
+          "../images/cctv/tiandy/8.jpg",
+          "../images/cctv/tiandy/9.jpg",
+          "../images/cctv/tiandy/10.jpg",
+        ],
+      };
+
+      function openImageModal(brand, imageIndex) {
+        currentBrand = brand;
+        currentImageIndex = imageIndex;
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const imageCounter = document.getElementById("imageCounter");
+
+        modalImage.src = imageSets[brand][imageIndex];
+        imageCounter.textContent = `${imageIndex + 1} / ${imageSets[brand].length}`;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        // Prevent body scroll
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        // Restore body scroll
+        document.body.style.overflow = "auto";
+      }
+
+      function previousImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + imageSets[currentBrand].length) %
+          imageSets[currentBrand].length;
+        updateModalImage();
+      }
+
+      function nextImage() {
+        currentImageIndex =
+          (currentImageIndex + 1) % imageSets[currentBrand].length;
+        updateModalImage();
+      }
+
+      function updateModalImage() {
+        const modalImage = document.getElementById("modalImage");
+        const imageCounter = document.getElementById("imageCounter");
+
+        modalImage.src = imageSets[currentBrand][currentImageIndex];
+        imageCounter.textContent = `${currentImageIndex + 1} / ${imageSets[currentBrand].length}`;
+      }
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        const modal = document.getElementById("imageModal");
+        if (!modal.classList.contains("hidden")) {
+          if (e.key === "Escape") {
+            closeImageModal();
+          } else if (e.key === "ArrowLeft") {
+            previousImage();
+          } else if (e.key === "ArrowRight") {
+            nextImage();
+          }
+        }
+      });
+
+      // Close modal on background click
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeImageModal();
+          }
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 50
-        });
+      AOS.init({
+        duration: 800,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 50,
+      });
     </script>
-</body>
-
+  </body>
 </html>

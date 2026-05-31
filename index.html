@@ -1,1160 +1,1477 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="P3NKZ-xK0PcLqwkIVLSrC9m5aGTpeQ5qF_FA_E6NRHs" />
-    <meta name="description"
-        content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek." />
-    <meta name="keywords" content="CCTV Bogor, jasa pasang CCTV, instalasi jaringan, IT solution Jabodetabek" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="P3NKZ-xK0PcLqwkIVLSrC9m5aGTpeQ5qF_FA_E6NRHs"
+    />
+    <meta
+      name="description"
+      content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek."
+    />
+    <meta
+      name="keywords"
+      content="CCTV Bogor, jasa pasang CCTV, instalasi jaringan, IT solution Jabodetabek"
+    />
 
     <meta name="robots" content="index, follow" />
     <title>ZAYYAN TECHNO INTEGRASI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a56db',
-                        secondary: '#1e40af',
-                        accent: '#10b981'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a56db",
+              secondary: "#1e40af",
+              accent: "#10b981",
+            },
+          },
+        },
+      };
     </script>
+  </head>
 
-</head>
-
-<body class="font-sans text-gray-800 bg-gray-50">
+  <body class="font-sans text-gray-800 bg-gray-50">
     <div id="header-container"></div>
     <script>
-        fetch('header.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('header-container').innerHTML = html;
-            });
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header-container").innerHTML = html;
+        });
     </script>
 
     <!-- Hero Section -->
     <section class="relative h-[90vh] overflow-hidden">
-        <div class="absolute inset-0 bg-black/50 flex items-center">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                        Layanan Teknologi Terpercaya <span class="text-green-400">di Bogor</span>
-                    </h1>
-                    <p class="text-xl text-gray-200 mb-8 max-w-2xl">
-                        Solusi lengkap untuk kebutuhan teknologi dan keamanan properti Anda.
-                    </p>
+      <div class="absolute inset-0 bg-black/50 flex items-center">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 mt-10 leading-tight"
+            >
+              Layanan Teknologi Terpercaya
+              <span class="text-green-400">di Bogor</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+              Solusi lengkap untuk kebutuhan teknologi dan keamanan properti
+              Anda.
+            </p>
 
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg max-w-xl">
-                        <h3 class="text-xl font-bold text-white mb-4">Bersedia melayani :</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">1</span>
-                                <span class="text-gray-200">Pemasangan jasa instalasi access point internet dan
-                                    perbaikan</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">2</span>
-                                <span class="text-gray-200">Instalasi listrik dan perbaikan</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">3</span>
-                                <span class="text-gray-200">Pemasangan CCTV dan perbaikan</span>
-                            </li>
-                        </ul>
-                        <div class="mt-6 flex flex-wrap gap-4">
-                            <a href="https://wa.me/6287892843447"
-                                class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
-                                <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi Kami
-                            </a>
-                            <a href="#layanan"
-                                class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
-                                Layanan Kami <i class="fas fa-arrow-down ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg max-w-xl">
+              <h3 class="text-xl font-bold text-white mb-4">
+                Bersedia melayani :
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >1</span
+                  >
+                  <span class="text-gray-200"
+                    >Pemasangan jasa instalasi access point internet dan
+                    perbaikan</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >2</span
+                  >
+                  <span class="text-gray-200"
+                    >Instalasi listrik dan perbaikan</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >3</span
+                  >
+                  <span class="text-gray-200"
+                    >Pemasangan CCTV dan perbaikan</span
+                  >
+                </li>
+
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >4</span
+                  >
+                  <span class="text-gray-200"
+                    >Pemasangan dan perbaikan acces control,smart
+                    doorlock,alarm,sistem absensi fingerprint recognition</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a
+                  href="https://wa.me/6287892843447"
+                  class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition"
+                >
+                  <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi Kami
+                </a>
+                <a
+                  href="#layanan"
+                  class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition"
+                >
+                  Layanan Kami <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-            alt="Layanan Teknologi" class="w-full h-full object-cover">
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+        alt="Layanan Teknologi"
+        class="w-full h-full object-cover"
+      />
+    </section>
+
+    <!-- Banner Full Width -->
+    <section class="w-full">
+      <img
+        src="images/1.jpeg"
+        alt="Banner Zayyan Techno Integrasi"
+        class="w-full h-auto object-cover"
+      />
     </section>
 
     <!-- Profil Perusahaan -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <!-- Bagian Kiri: Profil Perusahaan -->
-                <div data-aos="fade-right" class="md:w-1/2 md:pr-12 mb-10 md:mb-0">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang <span class="text-primary">ZAYYAN TECHNO
-                            INTEGRASI</span></h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        ZAYYAN TECHNO INTEGRASI adalah penyedia jasa IT solution terpercaya di Bogor yang melayani
-                        wilayah Jakarta, Bogor, Depok, Tangerang, dan bekasi (Jabodetabek), Kami hadir untuk memberikan
-                        solusi instalasi dan perbaikan. produk-produk CCTV, Internet, dan kelistrikan AC-DC berkualitas
-                        dari merek ternama seperti Hikvision, Dahua, Hilook, Ezviz, tmou, Uniview, Tp-link, Tenda,
-                        Ruijie dan berbagai brand lainnya
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <!-- Bagian Kiri: Profil Perusahaan -->
+          <div data-aos="fade-right" class="md:w-1/2 md:pr-12 mb-10 md:mb-0">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Tentang <span class="text-primary">ZAYYAN TECHNO INTEGRASI</span>
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              ZAYYAN TECHNO INTEGRASI adalah penyedia jasa IT solution
+              terpercaya di Bogor yang melayani wilayah Jakarta, Bogor, Depok,
+              Tangerang, dan bekasi (Jabodetabek), Kami hadir untuk memberikan
+              solusi instalasi dan perbaikan. produk-produk CCTV, Internet, dan
+              kelistrikan AC-DC berkualitas dari merek ternama seperti
+              Hikvision, Dahua, Hilook, Ezviz, tmou, Uniview, Tp-link, Tenda,
+              Ruijie dan berbagai brand lainnya
 
-
-                        <br><br>
-                        Kami memberikan layanan lengkap mulai dari konsultasi penjualan, pemasangan, hingga perawatan
-                        dan aftertales Dengan pengalaman di bidang IT solution. ZAYYAN TECHNO INTEGRASI siap menjadi
-                        partner anda dalam menjaga keamanan anda.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="text-3xl font-bold text-primary mb-1">500+</div>
-                            <div class="text-sm text-gray-600">Klien Puas</div>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="text-3xl font-bold text-primary mb-1">1000+</div>
-                            <div class="text-sm text-gray-600">Proyek Selesai</div>
-                        </div>
-                    </div>
-                    <a href="/contact.html"
-                        class="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
-                        More Info
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Bagian Kanan: Gambar -->
-                <div data-aos="fade-left" class="md:w-1/2">
-                    <div class="relative rounded-xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.1.0&auto=format&fit=crop&w=1350&q=80"
-                            alt="Tim Profesional" class="w-full h-auto rounded-xl" loading="lazy">
-
-                    </div>
-                </div>
+              <br /><br />
+              Kami memberikan layanan lengkap mulai dari konsultasi penjualan,
+              pemasangan, hingga perawatan dan aftersales Dengan pengalaman di
+              bidang IT solution. ZAYYAN TECHNO INTEGRASI siap menjadi partner
+              anda dalam menjaga keamanan anda.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary mb-1">500+</div>
+                <div class="text-sm text-gray-600">Klien Puas</div>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary mb-1">1000+</div>
+                <div class="text-sm text-gray-600">Proyek Selesai</div>
+              </div>
             </div>
+            <div class="text-center">
+              <a
+                href="/contact.html"
+                class="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105"
+              >
+                More Info
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Keunggulan Kami -->
     <section id="tentang" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Mengapa Memilih Kami?</h2>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Mengapa Memilih Kami?
+        </h2>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Item 1 -->
-                <div data-aos="fade-up" data-aos-delay="100"
-                    class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-
-                        <i class="fa-solid fa-clock text-3xl text-primary"></i>
-
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">5+ Tahun</h3>
-                    <p class="text-gray-600">Pengalaman di bidang keamanan dan sistem CCTV</p>
-                </div>
-
-                <!-- Item 2 -->
-                <div data-aos="fade-up" data-aos-delay="100"
-                    class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-certificate text-3xl text-primary"></i>
-
-
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Produk Asli</h3>
-                    <p class="text-gray-600">Barang 100% original dengan garansi resmi</p>
-                </div>
-
-                <!-- Item 3 -->
-                <div data-aos="fade-up" data-aos-delay="100"
-                    class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-wrench text-3xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Teknisi Ahli</h3>
-                    <p class="text-gray-600">Dilayani oleh teknisi yang bersertifikat</p>
-                </div>
-
-                <!-- Item 4 -->
-                <div data-aos="fade-up" data-aos-delay="100"
-                    class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-headset text-3xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-gray-600">Layanan pelanggan siap membantu kapan saja</p>
-                </div>
+        <div class="grid md:grid-cols-4 gap-8">
+          <!-- Item 1 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fa-solid fa-clock text-3xl text-primary"></i>
             </div>
+            <h3 class="text-xl font-bold mb-2">5+ Tahun</h3>
+            <p class="text-gray-600">
+              Pengalaman di bidang keamanan dan sistem CCTV
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fa-solid fa-certificate text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Produk Asli</h3>
+            <p class="text-gray-600">
+              Barang 100% original dengan garansi resmi
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fa-solid fa-wrench text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Teknisi Ahli</h3>
+            <p class="text-gray-600">
+              Dilayani oleh teknisi yang bersertifikat
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fa-solid fa-headset text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+            <p class="text-gray-600">
+              Layanan pelanggan siap membantu kapan saja
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Layanan Kami -->
     <section id="layanan" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Layanan 1 -->
-                <div
-                    class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="aspect-[16/9] overflow-hidden">
-
-                        <img src="images/galeri/8.jpeg" alt="Pemasangan CCTV"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 relative">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-
-                                <i class="fa-solid fa-wifi text-blue-600 text-xl"></i>
-
-                            </div>
-
-
-
-
-                            <h3 class="text-xl font-bold text-gray-900" Pemasangan Acces Point Internet</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            Pemasangan Jasa Instalasi Acces Point dan Perbaikan
-                        </p>
-
-                    </div>
-                </div>
-
-                <!-- Layanan 2 -->
-                <div
-                    class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="aspect-[16/9] overflow-hidden">
-
-                        <img src="images/galeri/13.jpeg" alt="Perbaikan CCTV"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 relative">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fa-solid fa-plug text-blue-600 text-xl"></i>
-
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900">Pemasangan Listrik</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            Instalasi listrik dan perbaikan
-                        </p>
-
-                    </div>
-                </div>
-
-                <!-- Layanan 3 -->
-                <div
-                    class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="aspect-[16/9] overflow-hidden">
-
-                        <img src="images/galeri/5.jpeg" alt="Konsultasi Keamanan"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 relative">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-
-                                <i class="fa-solid fa-camera text-blue-600 text-xl"></i>
-
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900">Pemasangan CCTV</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            Pemasangan CCTV dan perbaikan
-                        </p>
-
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Layanan 1 -->
+          <div
+            class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                src="images/galeri/5.jpeg"
+                alt="Konsultasi Keamanan"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 relative">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fa-solid fa-camera text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Pemasangan CCTV</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Pemasangan CCTV dan perbaikan</p>
+            </div>
+          </div>
+
+          <!-- Layanan 2 -->
+          <div
+            class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                src="images/galeri/13.jpeg"
+                alt="Perbaikan CCTV"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 relative">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fa-solid fa-plug text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Pemasangan Listrik
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">Instalasi listrik dan perbaikan</p>
+            </div>
+          </div>
+
+          <!-- Layanan 3 -->
+
+          <div
+            class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                src="images/galeri/8.jpeg"
+                alt="Pemasangan CCTV"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 relative">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fa-solid fa-wifi text-blue-600 text-xl"></i>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900">
+                  Pemasangan Acces Point Internet
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Pemasangan Jasa Instalasi Acces Point dan Perbaikan
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Galeri Foto -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Galeri Pemasangan</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-                Hasil pemasangan CCTV profesional untuk berbagai kebutuhan properti
-            </p>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Galeri Pemasangan</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+          Hasil pemasangan CCTV profesional untuk berbagai kebutuhan properti
+        </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Image 1-12 from local folder -->
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/1.jpeg" alt="Galeri 1"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="0">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/2.jpeg" alt="Galeri 2"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="1">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/3.jpeg" alt="Galeri 3"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="2">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/4.jpeg" alt="Galeri 4"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="3">
-                </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Image 1-12 from local folder -->
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/1.jpeg"
+              alt="Galeri 1"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="0"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/2.jpeg"
+              alt="Galeri 2"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="1"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/3.jpeg"
+              alt="Galeri 3"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="2"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/4.jpeg"
+              alt="Galeri 4"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="3"
+            />
+          </div>
 
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/6.jpeg" alt="Galeri 6"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="5">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/7.jpeg" alt="Galeri 7"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="6">
-                </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/6.jpeg"
+              alt="Galeri 6"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="5"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/7.jpeg"
+              alt="Galeri 7"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="6"
+            />
+          </div>
 
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/9.jpeg" alt="Galeri 9"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="8">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/10.jpeg" alt="Galeri 10"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="9">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/11.jpeg" alt="Galeri 11"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="10">
-                </div>
-                <div data-aos="zoom-in-up"
-                    class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="images/galeri/12.jpeg" alt="Galeri 12"
-                        class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
-                        loading="lazy" data-index="11">
-                </div>
-            </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/9.jpeg"
+              alt="Galeri 9"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="8"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/10.jpeg"
+              alt="Galeri 10"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="9"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/11.jpeg"
+              alt="Galeri 11"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="10"
+            />
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="images/galeri/12.jpeg"
+              alt="Galeri 12"
+              class="w-full h-48 object-cover hover:scale-105 transition duration-500 galeri-img"
+              loading="lazy"
+              data-index="11"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Paket CCTV -->
     <section id="paket" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-4">Pilihan Paket CCTV</h2>
-            <p data-aos="fade-up" class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-                Berbagai pilihan paket CCTV siap pasang dengan harga terjangkau dan kualitas terjamin
-            </p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-
-                <!-- Product 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition flex flex-col">
-
-                    <div class="bg-gray-100 overflow-hidden">
-                        <img src="../images/cctv/hikvision/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 3.599.000</p>
-
-                        <ul class="space-y-2 flex-grow mb-6">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>30 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.599.000"
-                            class="block bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-
-                    <div class="bg-gray-100 overflow-hidden">
-
-                        <img src="../images/cctv/dahua/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover">
-
-                    </div>
-
-
-
-                    <div class="p-6 flex flex-col flex-grow">
-
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 3.599.000</p>
-
-
-
-                        <ul class="space-y-2 mb-6 flex-grow">
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>Jasa Pasang & Konfigurasi</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>Garansi Unit 2 Tahun</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>1 DVR 4 Channel</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>2 Camera Indoor / Outdoor 2MP</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>1 Hardisk 500 GB</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>30 m Coaxial Cable</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>4 Konektor BNC</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>2 Konektor DC</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>Kabel HDMI 1,5 Meter</span>
-
-                            </li>
-
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>Power Supply 4 Port</span>
-
-                            </li>
-
-                        </ul>
-
-
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.599.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition">
-
-                            Order Sekarang
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-
-
-                <!-- Product 3 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('hilook', 0)">
-                        <img src="../images/cctv/hilook/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 2.799.000</p>
-                        <ul class="space-y-2 mb-6 flex-grow">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>30 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/6287892843447?text=Paket%20CCTV%202%20Kamera%20Hilook%20IDR%202.799.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- Product 4 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('uniview', 0)">
-                        <img src="../images/cctv/uniview/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 2.899.000</p>
-
-                        <ul class="space-y-2 mb-6 flex-grow">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa
-                                    Pasang & Konfigurasi</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Garansi Unit 2 Tahun</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    DVR 4 Channel</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Camera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>30 m
-                                    Coaxial Cable</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>4
-                                    Konektor BNC</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Konektor DC</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel HDMI 1,5 Meter</span>
-                            </li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Power Supply 4 Port</span>
-                            </li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%202.899.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- Product 5 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('tiandy', 0)">
-                        <img src="../images/cctv/tiandy/1.jpg" alt="Paket CCTV 2 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
-                        <p class="text-lg font-semibold text-primary mb-4">IDR 3.899.000</p>
-
-                        <ul class="space-y-2 mb-6 flex-grow">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    NVR 5 Channel</span></li>
-                            <li class="flex items-start">
-
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                <span>Garansi Unit 2 Tahun</span>
-
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>2
-                                    Kamera Indoor / Outdoor 2MP</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Hardisk 500 GB</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel UTP CAT 6 30 m</span>
-                            </li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1
-                                    Unit Switch POE</span></li>
-                            <li class="flex items-start"><i
-                                    class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Harga Termasuk
-                                    Pemasangan</span></li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.899.000"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition">
-                            Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- Product 6 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <!-- Image -->
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('imou', 0)">
-                        <img src="../images/cctv/imou/1.jpg" alt="Paket CCTV 3 Kamera"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <!-- Content -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <!-- Price -->
-                        <div
-                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
-                            IDR 1.499.000
-                        </div>
-
-                        <!-- Title -->
-                        <h3 class="text-xl font-bold mb-1">Imou REX 2D</h3>
-                        <p class="text-sm text-gray-600 mb-4">
-                            Panoramic pan & tilt for 360° protection
-                        </p>
-
-                        <!-- Spesifikasi -->
-                        <details class="mb-5 group">
-                            <summary
-                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
-                                <span>Spesifikasi</span>
-                                <span class="transition group-open:rotate-45">+</span>
-                            </summary>
-
-                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
-                                <li>• 3MP 3K Resolution</li>
-                                <li>• Panoramic Pan & Tilt</li>
-                                <li>• Smart Tracking</li>
-                                <li>• Privacy Mode</li>
-                                <li>• Motion and Human Detection</li>
-                                <li>• Two-Way Talk</li>
-                                <li>• Abnormal Sound Alarm</li>
-                                <li>• Supports MicroSD Card (Up to 256 GB)</li>
-                            </ul>
-                        </details>
-
-                        <!-- Paket -->
-                        <div class="mb-6">
-                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>1 Kamera REX 2D</span>
-                                </li>
-                                <li class="flex items-start">
-
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                    <span>Garansi Unit 2 Tahun</span>
-
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Kabel Power 5m</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Terminal 1 Lubang, 1 Unit</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Steker 1 Unit</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Memory Card 32GB</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Training Cloud</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Jasa Pasang & Konfigurasi</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- CTA -->
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Imou%20REX%202D%20IDR%201.499.000"
-                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
-                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- Product 7 -->
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-gray-100 overflow-hidden cursor-pointer" onclick="openImageModal('ezviz', 0)">
-                        <img src="../images/cctv/ezviz/1.jpg" alt="Ezviz H1C"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div
-                            class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4">
-                            IDR 1.050.000
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-1">Ezviz H1C</h3>
-                        <p class="text-sm text-gray-600 mb-4">
-                            2 MP 1080P Smart Home Wifi Camera
-                        </p>
-
-                        <details class="mb-5 group">
-                            <summary
-                                class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100">
-                                <span>Spesifikasi</span>
-                                <span class="transition group-open:rotate-45">+</span>
-                            </summary>
-
-                            <ul class="mt-3 space-y-2 text-sm text-gray-700">
-                                <li>• 1080P Resolution with 108° Wide-Angle Lens</li>
-                                <li>• IR Night Vision up to 10m</li>
-                                <li>• Three Sound-Alert Modes</li>
-                                <li>• Two-Way Talk</li>
-                                <li>• Sleep Mode for Privacy</li>
-                                <li>• Supports MicroSD Card (Up to 512GB)</li>
-                                <li>• EZVIZ CloudPlay Storage</li>
-                                <li>• Install with Magnetic Base</li>
-                            </ul>
-                        </details>
-
-                        <div class="mb-6">
-                            <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>1 Kamera H1C</span></li>
-                                <li class="flex items-start">
-
-                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-
-                                    <span>Garansi Unit 2 Tahun</span>
-
-                                </li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Kabel Power 5m</span>
-                                </li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Terminal 1 Lubang 1
-                                        Unit</span></li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Steker 1 Unit</span>
-                                </li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Memory Card 32GB</span>
-                                </li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Training Cloud</span>
-                                </li>
-                                <li class="flex items-start"><i
-                                        class="fas fa-check text-green-500 mt-1 mr-2"></i><span>Jasa Pasang &
-                                        Konfigurasi</span></li>
-                            </ul>
-                        </div>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Ezviz%20H1C%20IDR%201.050.000"
-                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full font-semibold transition">
-                            <i class="fas fa-shopping-cart mr-2"></i> Order Sekarang
-                        </a>
-                    </div>
-                </div>
-
-
+      <div class="container mx-auto px-4">
+        <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-4">
+          Pilihan Paket CCTV
+        </h2>
+        <p
+          data-aos="fade-up"
+          class="text-center text-gray-600 max-w-2xl mx-auto mb-12"
+        >
+          Berbagai pilihan paket CCTV siap pasang dengan harga terjangkau dan
+          kualitas terjamin
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition flex flex-col"
+          >
+            <div class="bg-gray-100 overflow-hidden">
+              <img
+                src="../images/cctv/hikvision/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover"
+              />
             </div>
 
-            <div class="text-center mt-12">
-                <p class="text-gray-600 mb-4">Butuh penawaran khusus untuk kebutuhan bisnis atau proyek Anda?</p>
-                <a href="https://wa.me/6287892843447"
-                    class="inline-flex items-center text-primary font-medium hover:text-secondary">
-                    Hubungi Tim Penjualan Kami <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 3.599.000
+              </p>
+
+              <ul class="space-y-2 flex-grow mb-6">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Jasa Pasang & Konfigurasi</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Garansi Unit 2 Tahun</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 DVR 4 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Camera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Hardisk 500 GB</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>30 m Coaxial Cable</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>4 Konektor BNC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Konektor DC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel HDMI 1,5 Meter</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Power Supply 4 Port</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.599.000"
+                class="block bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
             </div>
+          </div>
+
+          <!-- Product 2 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div class="bg-gray-100 overflow-hidden">
+              <img
+                src="../images/cctv/dahua/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 3.599.000
+              </p>
+
+              <ul class="space-y-2 mb-6 flex-grow">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>Jasa Pasang & Konfigurasi</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>Garansi Unit 2 Tahun</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>1 DVR 4 Channel</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>2 Camera Indoor / Outdoor 2MP</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>1 Hardisk 500 GB</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>30 m Coaxial Cable</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>4 Konektor BNC</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>2 Konektor DC</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>Kabel HDMI 1,5 Meter</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>Power Supply 4 Port</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.599.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('hilook', 0)"
+            >
+              <img
+                src="../images/cctv/hilook/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 2.799.000
+              </p>
+              <ul class="space-y-2 mb-6 flex-grow">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Jasa Pasang & Konfigurasi</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Garansi Unit 2 Tahun</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 DVR 4 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Camera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Hardisk 500 GB</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>30 m Coaxial Cable</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>4 Konektor BNC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Konektor DC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel HDMI 1,5 Meter</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Power Supply 4 Port</span>
+                </li>
+              </ul>
+              <a
+                href="https://wa.me/6287892843447?text=Paket%20CCTV%202%20Kamera%20Hilook%20IDR%202.799.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('uniview', 0)"
+            >
+              <img
+                src="../images/cctv/uniview/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 2.899.000
+              </p>
+
+              <ul class="space-y-2 mb-6 flex-grow">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Jasa Pasang & Konfigurasi</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Garansi Unit 2 Tahun</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 DVR 4 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Camera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Hardisk 500 GB</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>30 m Coaxial Cable</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>4 Konektor BNC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Konektor DC</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel HDMI 1,5 Meter</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Power Supply 4 Port</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%202.899.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('tiandy', 0)"
+            >
+              <img
+                src="../images/cctv/tiandy/1.jpg"
+                alt="Paket CCTV 2 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-1">Paket CCTV 2 Kamera</h3>
+              <p class="text-lg font-semibold text-primary mb-4">
+                IDR 3.899.000
+              </p>
+
+              <ul class="space-y-2 mb-6 flex-grow">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 NVR 5 Channel</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                  <span>Garansi Unit 2 Tahun</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>2 Kamera Indoor / Outdoor 2MP</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Hardisk 500 GB</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Kabel UTP CAT 6 30 m</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>1 Unit Switch POE</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                  ><span>Harga Termasuk Pemasangan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20CCTV%202%20Kamera%20IDR%203.899.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <!-- Image -->
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('imou', 0)"
+            >
+              <img
+                src="../images/cctv/imou/1.jpg"
+                alt="Paket CCTV 3 Kamera"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 flex flex-col flex-grow">
+              <!-- Price -->
+              <div
+                class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4"
+              >
+                IDR 1.499.000
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-xl font-bold mb-1">Imou REX 2D</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Panoramic pan & tilt for 360° protection
+              </p>
+
+              <!-- Spesifikasi -->
+              <details class="mb-5 group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100"
+                >
+                  <span>Spesifikasi</span>
+                  <span class="transition group-open:rotate-45">+</span>
+                </summary>
+
+                <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                  <li>• 3MP 3K Resolution</li>
+                  <li>• Panoramic Pan & Tilt</li>
+                  <li>• Smart Tracking</li>
+                  <li>• Privacy Mode</li>
+                  <li>• Motion and Human Detection</li>
+                  <li>• Two-Way Talk</li>
+                  <li>• Abnormal Sound Alarm</li>
+                  <li>• Supports MicroSD Card (Up to 256 GB)</li>
+                </ul>
+              </details>
+
+              <!-- Paket -->
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>1 Kamera REX 2D</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                    <span>Garansi Unit 2 Tahun</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Kabel Power 5m</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Terminal 1 Lubang, 1 Unit</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Steker 1 Unit</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Memory Card 32GB</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Training Cloud</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Jasa Pasang & Konfigurasi</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- CTA -->
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Imou%20REX%202D%20IDR%201.499.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <div
+              class="bg-gray-100 overflow-hidden cursor-pointer"
+              onclick="openImageModal('ezviz', 0)"
+            >
+              <img
+                src="../images/cctv/ezviz/1.jpg"
+                alt="Ezviz H1C"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+              <div
+                class="text-lg font-semibold text-primary mb-4 text-center py-2 rounded-md font-semibold mb-4"
+              >
+                IDR 1.050.000
+              </div>
+
+              <h3 class="text-xl font-bold mb-1">Ezviz H1C</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                2 MP 1080P Smart Home Wifi Camera
+              </p>
+
+              <details class="mb-5 group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer border px-4 py-2 rounded-md text-sm font-medium bg-gray-50 hover:bg-gray-100"
+                >
+                  <span>Spesifikasi</span>
+                  <span class="transition group-open:rotate-45">+</span>
+                </summary>
+
+                <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                  <li>• 1080P Resolution with 108° Wide-Angle Lens</li>
+                  <li>• IR Night Vision up to 10m</li>
+                  <li>• Three Sound-Alert Modes</li>
+                  <li>• Two-Way Talk</li>
+                  <li>• Sleep Mode for Privacy</li>
+                  <li>• Supports MicroSD Card (Up to 512GB)</li>
+                  <li>• EZVIZ CloudPlay Storage</li>
+                  <li>• Install with Magnetic Base</li>
+                </ul>
+              </details>
+
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Paket Sudah Termasuk :</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>1 Kamera H1C</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+
+                    <span>Garansi Unit 2 Tahun</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Kabel Power 5m</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Terminal 1 Lubang 1 Unit</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Steker 1 Unit</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Memory Card 32GB</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Training Cloud</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i
+                    ><span>Jasa Pasang & Konfigurasi</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Ezviz%20H1C%20IDR%201.050.000"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium mt-auto transition"
+              >
+                Order Sekarang
+              </a>
+            </div>
+          </div>
         </div>
+
+        <div class="text-center mt-12">
+          <p class="text-gray-600 mb-4">
+            Butuh penawaran khusus untuk kebutuhan bisnis atau proyek Anda?
+          </p>
+          <a
+            href="https://wa.me/6287892843447"
+            class="inline-flex items-center text-primary font-medium hover:text-secondary"
+          >
+            Hubungi Tim Penjualan Kami <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Paket Layanan Lainnya -->
     <section id="layanan-lainnya" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pilihan Paket Layanan Lainnya</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Paket 1 - Silver -->
-                <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
-                    <div class="p-8">
-                        <!-- Icon Silver -->
-                        <div class="text-center mb-6">
-                            <div class="text-5xl text-slate-400 mb-2">
-                                <i class="fa-solid fa-medal"></i> 🥈
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                                Paket Instalasi Access Point Internet (Silver)
-                            </h3>
-                            <div class="text-3xl font-bold text-primary mb-2">Rp 199K</div>
-                            <div class="text-sm text-gray-500">Mulai dari</div>
-                        </div>
-
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Jasa Instalasi</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Setting Konfigurasi</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Pengecekan jaringan</span>
-                            </li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20Instalasi%20Dasar%20Rp%20199K"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center font-medium py-3 px-6 rounded-lg transition">
-                            Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Paket 2 - Gold (Populer) -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 border-2 border-blue-500">
-                    <div class="bg-blue-600 text-white text-center py-2">
-                        <span class="font-bold">POPULER</span>
-                    </div>
-                    <div class="p-8">
-                        <!-- Icon Gold -->
-                        <div class="text-center mb-6">
-                            <div class="text-5xl text-yellow-400 mb-2">
-                                <i class="fa-solid fa-award"></i> 🏅
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                                Paket Lengkap Instalasi Access Point Internet (Gold)
-                            </h3>
-                            <div class="text-3xl font-bold text-primary mb-2">Rp 899K</div>
-                            <div class="text-sm text-gray-500">Termasuk peralatan</div>
-                        </div>
-
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Modem</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Kabel LAN 30m</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Konektor RJ45</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Peralatan listrik pendukung</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Jasa instalasi profesional</span>
-                            </li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20Instalasi%20Lengkap%20Rp%20899K"
-                            class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-medium py-3 px-6 rounded-lg transition">
-                            Pesan Sekarang
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Paket 3 -->
-                <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
-                    <div class="p-8">
-                        <div class="text-center mb-6">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Instalasi Listrik</h3>
-                            <div class="text-3xl font-bold text-primary mb-2">Hubungi Kami</div>
-                            <div class="text-sm text-gray-500">Harga menyesuaikan kebutuhan</div>
-                        </div>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Instalasi listrik baru</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Perbaikan instalasi listrik</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Pemasangan stop kontak & saklar</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>Pengecekan instalasi listrik</span>
-                            </li>
-                        </ul>
-
-                        <a href="https://wa.me/6287892843447?text=Saya%20membutuhkan%20jasa%20instalasi%20listrik"
-                            class="block w-full bg-primary hover:bg-blue-700 text-white text-center font-medium py-3 px-6 rounded-lg transition">
-                            Konsultasi Gratis
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Pilihan Paket Layanan Lainnya
+          </h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Paket 1 - Silver -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <!-- Icon Silver -->
+              <div class="text-center mb-6">
+                <div class="text-5xl text-slate-400 mb-2">
+                  <i class="fa-solid fa-medal"></i> 🥈
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Paket Instalasi Access Point Internet (Silver)
+                </h3>
+                <div class="text-3xl font-bold text-primary mb-2">Rp 199K</div>
+                <div class="text-sm text-gray-500">Mulai dari</div>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Jasa Instalasi</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Setting Konfigurasi</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Pengecekan jaringan</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20Instalasi%20Dasar%20Rp%20199K"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center font-medium py-3 px-6 rounded-lg transition"
+              >
+                Pesan Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 2 - Gold (Populer) -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 border-2 border-blue-500"
+          >
+            <div class="bg-blue-600 text-white text-center py-2">
+              <span class="font-bold">POPULER</span>
+            </div>
+            <div class="p-8">
+              <!-- Icon Gold -->
+              <div class="text-center mb-6">
+                <div class="text-5xl text-yellow-400 mb-2">
+                  <i class="fa-solid fa-award"></i> 🏅
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Paket Lengkap Instalasi Access Point Internet (Gold)
+                </h3>
+                <div class="text-3xl font-bold text-primary mb-2">Rp 899K</div>
+                <div class="text-sm text-gray-500">Termasuk peralatan</div>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Modem</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Kabel LAN 30m</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Konektor RJ45</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Peralatan listrik pendukung</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Jasa instalasi profesional</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20tertarik%20dengan%20Paket%20Instalasi%20Lengkap%20Rp%20899K"
+                class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-medium py-3 px-6 rounded-lg transition"
+              >
+                Pesan Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Instalasi Listrik
+                </h3>
+                <div class="text-3xl font-bold text-primary mb-2">
+                  Hubungi Kami
+                </div>
+                <div class="text-sm text-gray-500">
+                  Harga menyesuaikan kebutuhan
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Instalasi listrik baru</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Perbaikan instalasi listrik</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Pemasangan stop kontak & saklar</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"
+                  ></i>
+                  <span>Pengecekan instalasi listrik</span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/6287892843447?text=Saya%20membutuhkan%20jasa%20instalasi%20listrik"
+                class="block w-full bg-primary hover:bg-blue-700 text-white text-center font-medium py-3 px-6 rounded-lg transition"
+              >
+                Konsultasi Gratis
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimoni -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Bukti Kepuasan Pelanggan</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-                Berikut adalah bukti nyata kepuasan pelanggan yang telah menggunakan layanan kami
-            </p>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Bukti Kepuasan Pelanggan
+        </h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+          Berikut adalah bukti nyata kepuasan pelanggan yang telah menggunakan
+          layanan kami
+        </p>
 
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Testimoni 1 -->
-                <div data-aos="fade-up" data-aos-delay="100" class="text-center">
-                    <div
-                        class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="images/testimoni/1.png" alt="Testimoni 1" class="max-w-full h-auto">
-                    </div>
-                </div>
-
-                <!-- Testimoni 2 -->
-                <div data-aos="fade-up" data-aos-delay="200" class="text-center">
-                    <div
-                        class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="images/testimoni/2.png" alt="Testimoni 2" class="max-w-full h-auto">
-                    </div>
-                </div>
-
-                <!-- Testimoni 3 -->
-                <div data-aos="fade-up" data-aos-delay="300" class="text-center">
-                    <div
-                        class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="images/testimoni/3.png" alt="Testimoni 3" class="max-w-full h-auto">
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300" class="text-center">
-                    <div
-                        class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="images/testimoni/4.png" alt="Testimoni 4" class="max-w-full h-auto">
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300" class="text-center">
-                    <div
-                        class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="images/testimoni/5.png" alt="Testimoni 5" class="max-w-full h-auto">
-                    </div>
-                </div>
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- Testimoni 1 -->
+          <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+            <div
+              class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="images/testimoni/1.png"
+                alt="Testimoni 1"
+                class="max-w-full h-auto"
+              />
             </div>
+          </div>
+
+          <!-- Testimoni 2 -->
+          <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+            <div
+              class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="images/testimoni/2.png"
+                alt="Testimoni 2"
+                class="max-w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <!-- Testimoni 3 -->
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+            <div
+              class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="images/testimoni/3.png"
+                alt="Testimoni 3"
+                class="max-w-full h-auto"
+              />
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+            <div
+              class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="images/testimoni/4.png"
+                alt="Testimoni 4"
+                class="max-w-full h-auto"
+              />
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+            <div
+              class="inline-block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="images/testimoni/5.png"
+                alt="Testimoni 5"
+                class="max-w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section data-aos="zoom-in" class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Siap Meningkatkan Keamanan Anda?</h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Dapatkan penawaran terbaik untuk sistem keamanan CCTV berkualitas dengan harga kompetitif
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/6287892843447"
-                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition">
-                    <i class="fab fa-whatsapp text-xl mr-2"></i> Konsultasi Gratis
-                </a>
-                <a href="tel:6287892843447"
-                    class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition">
-                    <i class="fas fa-phone-alt mr-2"></i> 0878-9284-3447
-
-                </a>
-            </div>
+    <section
+      data-aos="zoom-in"
+      class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Siap Meningkatkan Keamanan Anda?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Dapatkan penawaran terbaik untuk sistem keamanan CCTV berkualitas
+          dengan harga kompetitif
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://wa.me/6287892843447"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition"
+          >
+            <i class="fab fa-whatsapp text-xl mr-2"></i> Konsultasi Gratis
+          </a>
+          <a
+            href="tel:6287892843447"
+            class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-full inline-flex items-center justify-center transition"
+          >
+            <i class="fas fa-phone-alt mr-2"></i> 0878-9284-3447
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <div id="footer-container"></div>
     <script>
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer-container').innerHTML = html;
-            });
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
     </script>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6287892843447"
-        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/6287892843447"
+      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileProductsMenu = document.getElementById('mobile-products-menu');
-            const productsDropdown = document.getElementById('products-dropdown');
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileProductsMenu = document.getElementById(
+          "mobile-products-menu",
+        );
+        const productsDropdown = document.getElementById("products-dropdown");
 
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', function (e) {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Toggle products dropdown in mobile menu
-            if (mobileProductsMenu && productsDropdown) {
-                mobileProductsMenu.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    productsDropdown.classList.toggle('hidden');
-                    this.querySelector('i').classList.toggle('fa-chevron-down');
-                    this.querySelector('i').classList.toggle('fa-chevron-up');
-                });
-            }
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                    mobileMenu.classList.add('hidden');
-                    if (productsDropdown) productsDropdown.classList.add('hidden');
-                }
-            });
-
-            // Close mobile menu when a link is clicked
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.add('hidden');
-                    if (productsDropdown) productsDropdown.classList.add('hidden');
-                });
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
-            });
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener("click", function (e) {
+          e.stopPropagation();
+          mobileMenu.classList.toggle("hidden");
         });
+
+        // Toggle products dropdown in mobile menu
+        if (mobileProductsMenu && productsDropdown) {
+          mobileProductsMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+            productsDropdown.classList.toggle("hidden");
+            this.querySelector("i").classList.toggle("fa-chevron-down");
+            this.querySelector("i").classList.toggle("fa-chevron-up");
+          });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+            mobileMenu.classList.add("hidden");
+            if (productsDropdown) productsDropdown.classList.add("hidden");
+          }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            if (productsDropdown) productsDropdown.classList.add("hidden");
+          });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId !== "#") {
+              e.preventDefault();
+              const target = document.querySelector(targetId);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }
+          });
+        });
+      });
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 900,
-                easing: 'ease-out-cubic',
-                once: true,
-                offset: 80
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 900,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 80,
         });
+      });
     </script>
     <script src="galeri-modal.js"></script>
-</body>
-
+  </body>
 </html>
