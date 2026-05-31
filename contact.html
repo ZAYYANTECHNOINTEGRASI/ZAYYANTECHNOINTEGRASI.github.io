@@ -1,374 +1,484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hubungi Kami - ZAYYAN TECHNO INTEGRASI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <meta name="description"
-        content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek." />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Zayyan Techno Integrasi melayani pemasangan CCTV, jaringan internet, listrik, dan IT Solution Jabodetabek."
+    />
 
     <meta name="robots" content="index, follow" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a56db',
-                        secondary: '#1e40af',
-                        accent: '#10b981'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a56db",
+              secondary: "#1e40af",
+              accent: "#10b981",
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-sans">
+  <body class="font-sans">
     <div id="header-container"></div>
     <script>
-        fetch('header.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('header-container').innerHTML = html;
-            });
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header-container").innerHTML = html;
+        });
     </script>
 
     <!-- Hero Section -->
     <section class="relative h-[90vh] overflow-hidden">
-        <div class="absolute inset-0 bg-black/50 flex items-center">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                        Layanan Teknologi Terpercaya <span class="text-green-400">di Bogor</span>
-                    </h1>
-                    <p class="text-xl text-gray-200 mb-8 max-w-2xl">
-                        Solusi lengkap untuk kebutuhan teknologi dan keamanan properti Anda.
-                    </p>
+      <div class="absolute inset-0 bg-black/50 flex items-center">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            >
+              Layanan Teknologi Terpercaya
+              <span class="text-green-400">di Bogor</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+              Solusi lengkap untuk kebutuhan teknologi dan keamanan properti
+              Anda.
+            </p>
 
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg max-w-xl">
-                        <h3 class="text-xl font-bold text-white mb-4">Bersedia melayani :</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">1</span>
-                                <span class="text-gray-200">Pemasangan jasa instalasi router internet dan
-                                    perbaikan</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">2</span>
-                                <span class="text-gray-200">Instalasi listrik dan perbaikan</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span
-                                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">3</span>
-                                <span class="text-gray-200">Pemasangan CCTV dan perbaikan</span>
-                            </li>
-                        </ul>
-                        <div class="mt-6 flex flex-wrap gap-4">
-                            <a href="https://wa.me/6287892843447"
-                                class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
-                                <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi Kami
-                            </a>
-                            <a href="/index.html#layanan"
-                                class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition">
-                                Layanan Kami <i class="fas fa-arrow-down ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg max-w-xl">
+              <h3 class="text-xl font-bold text-white mb-4">
+                Bersedia melayani :
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >1</span
+                  >
+                  <span class="text-gray-200"
+                    >Pemasangan jasa instalasi router internet dan
+                    perbaikan</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >2</span
+                  >
+                  <span class="text-gray-200"
+                    >Instalasi listrik dan perbaikan</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3"
+                    >3</span
+                  >
+                  <span class="text-gray-200"
+                    >Pemasangan CCTV dan perbaikan</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a
+                  href="https://wa.me/6287892843447"
+                  class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition"
+                >
+                  <i class="fab fa-whatsapp mr-2 text-xl"></i> Hubungi Kami
+                </a>
+                <a
+                  href="/index.html#layanan"
+                  class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition"
+                >
+                  Layanan Kami <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-            alt="Layanan Teknologi" class="w-full h-full object-cover">
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+        alt="Layanan Teknologi"
+        class="w-full h-full object-cover"
+      />
     </section>
 
     <!-- Contact Info Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Informasi Kontak</h2>
-                <div class="h-1 w-20 bg-primary mx-auto mb-8"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Tim kami siap membantu menjawab pertanyaan Anda dan
-                    memberikan solusi terbaik untuk kebutuhan keamanan Anda.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
-                    <div class="contact-icon mx-auto">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Alamat Kantor</h3>
-                    <p class="text-gray-600">Jl. Kapten Yusuf Jl. Kebandungan I No.Rt 04/08, Sirnagalih,
-                        <br> Kec. Tamansari, Kabupaten Bogor,
-                        <br> Jawa Barat 16610
-
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
-                    <div class="contact-icon mx-auto">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Telepon / WhatsApp</h3>
-                    <p class="text-gray-600">+62 878-9284-3447
-
-                    </p>
-                    <a href="https://wa.me/6287892843447"
-                        class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium transition">
-                        <i class="fab fa-whatsapp mr-2"></i> Chat Sekarang
-                    </a>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
-                    <div class="contact-icon mx-auto">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Email</h3>
-                    <p class="text-gray-600">zayyantechnointegrasi@gmail.com
-
-                    </p>
-                    <a href="mailto:zayyantechnointegrasi@gmail.com"
-                        class="inline-block mt-4 bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium transition">
-                        <i class="fas fa-paper-plane mr-2"></i> Kirim Email
-                    </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Informasi Kontak
+          </h2>
+          <div class="h-1 w-20 bg-primary mx-auto mb-8"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Tim kami siap membantu menjawab pertanyaan Anda dan memberikan
+            solusi terbaik untuk kebutuhan keamanan Anda.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition"
+          >
+            <div class="contact-icon mx-auto">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Alamat Kantor</h3>
+            <p class="text-gray-600">
+              Jl. Kapten Yusuf Jl. Kebandungan I No.Rt 04/08, Sirnagalih, <br />
+              Kec. Tamansari, Kabupaten Bogor, <br />
+              Jawa Barat 16610
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition"
+          >
+            <div class="contact-icon mx-auto">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Telepon / WhatsApp</h3>
+            <p class="text-gray-600">+62 878-9284-3447</p>
+            <a
+              href="https://wa.me/6287892843447"
+              class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium transition"
+            >
+              <i class="fab fa-whatsapp mr-2"></i> Chat Sekarang
+            </a>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition"
+          >
+            <div class="contact-icon mx-auto">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Email</h3>
+            <p class="text-gray-600">zayyantechnointegrasi@gmail.com</p>
+            <a
+              href="mailto:zayyantechnointegrasi@gmail.com"
+              class="inline-block mt-4 bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium transition"
+            >
+              <i class="fas fa-paper-plane mr-2"></i> Kirim Email
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Form & Map Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Contact Form -->
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Contact Form -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h2>
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Masukkan nama lengkap"
+                  required
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                            <input type="text" id="name" name="name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                placeholder="Masukkan nama lengkap" required>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                <input type="email" id="email" name="email"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="email@contoh.com" required>
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Nomor
-                                    Telepon</label>
-                                <input type="tel" id="phone" name="phone"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="0812-3456-7890" required>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                placeholder="Tentang apa pesan Anda?" required>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
-                            <textarea id="message" name="message" rows="5"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                placeholder="Tulis pesan Anda di sini..." required></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-md transition duration-300">
-                            Kirim Pesan <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="email@contoh.com"
+                    required
+                  />
                 </div>
-
-                <!-- Map -->
                 <div>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Lokasi Kami</h2>
-                    <div class="map-container">
-
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.115916501669!2d106.76866787573614!3d-6.632522964838443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cf001e48f53d%3A0x8ff1f70af31fbcb8!2sZAYYAN%20TECHNO%20INTEGRASI!5e0!3m2!1sid!2sid!4v1769096721426!5m2!1sid!2sid"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
-                    <div class="mt-6 bg-gray-50 p-6 rounded-lg">
-                        <h3 class="font-bold text-lg mb-3">Jam Operasional</h3>
-                        <ul class="space-y-2">
-                            <li class="flex justify-between">
-                                <span class="text-gray-600">Senin - Jumat</span>
-                                <span class="font-medium">09:00 - 17:00 WIB</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-gray-600">Sabtu</span>
-                                <span class="font-medium">09:00 - 15:00 WIB</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-gray-600">Minggu & Hari Libur</span>
-                                <span class="font-medium">Tutup</span>
-                            </li>
-                        </ul>
-
-
-                    </div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nomor Telepon</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="0812-3456-7890"
+                    required
+                  />
                 </div>
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Subjek</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Tentang apa pesan Anda?"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Tulis pesan Anda di sini..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-md transition duration-300"
+              >
+                Kirim Pesan <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Map -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Lokasi Kami</h2>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.115916501669!2d106.76866787573614!3d-6.632522964838443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cf001e48f53d%3A0x8ff1f70af31fbcb8!2sZAYYAN%20TECHNO%20INTEGRASI!5e0!3m2!1sid!2sid!4v1769096721426!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+                referrerpolicy="no-referrer-when-downgrade"></iframe
+              >
             </div>
+
+            <div class="mt-6 bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-lg mb-3">Jam Operasional</h3>
+              <ul class="space-y-2">
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Senin - Jumat</span>
+                  <span class="font-medium">09:00 - 17:00 WIB</span>
+                </li>
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Sabtu</span>
+                  <span class="font-medium">09:00 - 15:00 WIB</span>
+                </li>
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Minggu & Hari Libur</span>
+                  <span class="font-medium">Tutup</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-16 bg-gradient-to-r from-primary to-blue-700 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Siap Meningkatkan Keamanan Properti Anda?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Konsultasikan kebutuhan keamanan Anda dengan tim ahli kami
-                sekarang juga.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/6287892843447"
-                    class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-medium transition flex items-center justify-center">
-                    <i class="fab fa-whatsapp text-xl mr-2"></i> Chat WhatsApp
-                </a>
-                <a href="tel:+6287892843447"
-                    class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-full font-medium transition flex items-center justify-center">
-                    <i class="fas fa-phone-alt mr-2"></i> +62 878-9284-3447
-                </a>
-            </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Siap Meningkatkan Keamanan Properti Anda?
+        </h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Konsultasikan kebutuhan keamanan Anda dengan tim ahli kami sekarang
+          juga.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://wa.me/6287892843447"
+            class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-medium transition flex items-center justify-center"
+          >
+            <i class="fab fa-whatsapp text-xl mr-2"></i> Chat WhatsApp
+          </a>
+          <a
+            href="tel:+6287892843447"
+            class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-full font-medium transition flex items-center justify-center"
+          >
+            <i class="fas fa-phone-alt mr-2"></i> +62 878-9284-3447
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <div id="footer-container"></div>
     <script>
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer-container').innerHTML = html;
-            });
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
     </script>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6281234567890"
-        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/6281234567890"
+      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top"
-        class="fixed bottom-24 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-blue-600 transition z-50 hidden">
-        <i class="fas fa-arrow-up"></i>
+    <button
+      id="back-to-top"
+      class="fixed bottom-24 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-blue-600 transition z-50 hidden"
+    >
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileProductsMenu = document.getElementById('mobile-products-menu');
-            const productsDropdown = document.getElementById('products-dropdown');
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileProductsMenu = document.getElementById(
+          "mobile-products-menu",
+        );
+        const productsDropdown = document.getElementById("products-dropdown");
 
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', function (e) {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Toggle products dropdown in mobile menu
-            if (mobileProductsMenu && productsDropdown) {
-                mobileProductsMenu.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    productsDropdown.classList.toggle('hidden');
-                    this.querySelector('i').classList.toggle('fa-chevron-down');
-                    this.querySelector('i').classList.toggle('fa-chevron-up');
-                });
-            }
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (mobileMenu && !mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                    mobileMenu.classList.add('hidden');
-                    if (productsDropdown) productsDropdown.classList.add('hidden');
-                }
-            });
-
-            // Close mobile menu when a link is clicked
-            if (mobileMenu) {
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', function () {
-                        mobileMenu.classList.add('hidden');
-                        if (productsDropdown) productsDropdown.classList.add('hidden');
-                    });
-                });
-            }
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
-            });
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener("click", function (e) {
+          e.stopPropagation();
+          mobileMenu.classList.toggle("hidden");
         });
+
+        // Toggle products dropdown in mobile menu
+        if (mobileProductsMenu && productsDropdown) {
+          mobileProductsMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+            productsDropdown.classList.toggle("hidden");
+            this.querySelector("i").classList.toggle("fa-chevron-down");
+            this.querySelector("i").classList.toggle("fa-chevron-up");
+          });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            mobileMenu &&
+            !mobileMenu.contains(e.target) &&
+            e.target !== mobileMenuButton
+          ) {
+            mobileMenu.classList.add("hidden");
+            if (productsDropdown) productsDropdown.classList.add("hidden");
+          }
+        });
+
+        // Close mobile menu when a link is clicked
+        if (mobileMenu) {
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
+              if (productsDropdown) productsDropdown.classList.add("hidden");
+            });
+          });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId !== "#") {
+              e.preventDefault();
+              const target = document.querySelector(targetId);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }
+          });
+        });
+      });
     </script>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-        // Back to Top Button
-        const backToTopButton = document.getElementById('back-to-top');
+      // Back to Top Button
+      const backToTopButton = document.getElementById("back-to-top");
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Form Submission
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                // Add your form submission logic here
-                alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
-                this.reset();
-            });
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove("hidden");
+        } else {
+          backToTopButton.classList.add("hidden");
         }
-    </script>
-</body>
+      });
 
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Form Submission
+      const contactForm = document.querySelector("form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Add your form submission logic here
+          alert(
+            "Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.",
+          );
+          this.reset();
+        });
+      }
+    </script>
+  </body>
 </html>
